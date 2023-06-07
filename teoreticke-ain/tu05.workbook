@@ -242,13 +242,33 @@
                               ]
                             },
                             "rightChild": {
-                              "type": "open",
+                              "type": "beta",
                               "node": {
                                 "id": 14,
                                 "value": "T (rainy(day)∨passed(cleaning_car,road,day))",
                                 "references": [
                                   "3"
                                 ]
+                              },
+                              "leftChild": {
+                                "type": "open",
+                                "node": {
+                                  "id": 15,
+                                  "value": "T rainy(day)",
+                                  "references": [
+                                    "14"
+                                  ]
+                                }
+                              },
+                              "rightChild": {
+                                "type": "open",
+                                "node": {
+                                  "id": 16,
+                                  "value": "T passed(cleaning_car,road,day)",
+                                  "references": [
+                                    "14"
+                                  ]
+                                }
                               }
                             }
                           }
