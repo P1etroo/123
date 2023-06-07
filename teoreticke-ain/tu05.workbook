@@ -196,23 +196,35 @@
                           ]
                         },
                         "leftChild": {
-                          "type": "open",
+                          "type": "closed",
                           "node": {
                             "id": 10,
                             "value": "F weekend(day)",
                             "references": [
                               "4"
                             ]
-                          }
+                          },
+                          "closed": [
+                            "10",
+                            "9"
+                          ]
                         },
                         "rightChild": {
-                          "type": "open",
+                          "type": "alpha",
                           "node": {
                             "id": 11,
                             "value": "T ¬passed(cleaning_car,road,day)",
                             "references": [
                               "4"
                             ]
+                          },
+                          "child": {
+                            "type": "open",
+                            "node": {
+                              "id": 12,
+                              "value": "F passed(cleaning_car,road,day)",
+                              "references": []
+                            }
                           }
                         }
                       }
