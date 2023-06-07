@@ -219,13 +219,29 @@
                             ]
                           },
                           "child": {
-                            "type": "open",
+                            "type": "beta",
                             "node": {
                               "id": 12,
                               "value": "F passed(cleaning_car,road,day)",
                               "references": [
                                 "11"
                               ]
+                            },
+                            "leftChild": {
+                              "type": "open",
+                              "node": {
+                                "id": 13,
+                                "value": "T",
+                                "references": []
+                              }
+                            },
+                            "rightChild": {
+                              "type": "open",
+                              "node": {
+                                "id": 14,
+                                "value": "",
+                                "references": []
+                              }
                             }
                           }
                         }
