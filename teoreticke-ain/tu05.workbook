@@ -151,11 +151,21 @@
                 "references": []
               },
               "child": {
-                "type": "open",
+                "type": "alpha",
                 "node": {
                   "id": 5,
-                  "value": "",
-                  "references": []
+                  "value": "T (have(umbrella,day)∧wet(road,day))",
+                  "references": [
+                    "1"
+                  ]
+                },
+                "child": {
+                  "type": "open",
+                  "node": {
+                    "id": 6,
+                    "value": "T ¬weekend(day)",
+                    "references": []
+                  }
                 }
               }
             }
