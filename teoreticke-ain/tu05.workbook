@@ -91,7 +91,7 @@
           "value": "",
           "references": []
         },
-        "config": "Propositional"
+        "config": "Full FOL"
       },
       "idCounter": 0,
       "comments": {
