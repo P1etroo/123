@@ -130,11 +130,27 @@
           "references": []
         },
         "child": {
-          "type": "open",
+          "type": "assumption",
           "node": {
             "id": 2,
-            "value": "",
+            "value": "T (have(umbrella,day)→¬rainy(day))",
             "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T (wet(road,day)→(rainy(day)∨passed(cleaning_car,road,day)))",
+              "references": []
+            },
+            "child": {
+              "type": "open",
+              "node": {
+                "id": 4,
+                "value": "T (weekend(day)→¬passed(cleaning_car,road,day))",
+                "references": []
+              }
+            }
           }
         },
         "config": "Basic propositional"
