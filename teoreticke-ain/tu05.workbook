@@ -187,13 +187,33 @@
                         ]
                       },
                       "child": {
-                        "type": "open",
+                        "type": "beta",
                         "node": {
                           "id": 9,
                           "value": "T weekend(day)",
                           "references": [
                             "6"
                           ]
+                        },
+                        "leftChild": {
+                          "type": "open",
+                          "node": {
+                            "id": 10,
+                            "value": "F weekend(day)",
+                            "references": [
+                              "5"
+                            ]
+                          }
+                        },
+                        "rightChild": {
+                          "type": "open",
+                          "node": {
+                            "id": 11,
+                            "value": "T",
+                            "references": [
+                              "5"
+                            ]
+                          }
                         }
                       }
                     }
