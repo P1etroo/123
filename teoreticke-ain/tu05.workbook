@@ -123,11 +123,19 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "open",
+        "type": "assumption",
         "node": {
           "id": 1,
-          "value": "",
+          "value": "F ((have(umbrella,day)∧wet(road,day))→¬weekend(day))",
           "references": []
+        },
+        "child": {
+          "type": "open",
+          "node": {
+            "id": 2,
+            "value": "",
+            "references": []
+          }
         },
         "config": "Basic propositional"
       },
