@@ -201,7 +201,7 @@
                             "id": 10,
                             "value": "F weekend(day)",
                             "references": [
-                              "5"
+                              "4"
                             ]
                           }
                         },
@@ -209,9 +209,9 @@
                           "type": "open",
                           "node": {
                             "id": 11,
-                            "value": "T",
+                            "value": "T ¬passed(cleaning_car,road,day)",
                             "references": [
-                              "5"
+                              "4"
                             ]
                           }
                         }
