@@ -285,7 +285,7 @@
             }
           }
         },
-        "config": "Basic propositional"
+        "config": "Full FOL"
       },
       "idCounter": 0,
       "comments": {
