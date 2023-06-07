@@ -228,19 +228,27 @@
                               ]
                             },
                             "leftChild": {
-                              "type": "open",
+                              "type": "closed",
                               "node": {
                                 "id": 13,
-                                "value": "T",
-                                "references": []
-                              }
+                                "value": "F wet(road,day)",
+                                "references": [
+                                  "3"
+                                ]
+                              },
+                              "closed": [
+                                "",
+                                ""
+                              ]
                             },
                             "rightChild": {
                               "type": "open",
                               "node": {
                                 "id": 14,
-                                "value": "",
-                                "references": []
+                                "value": "T (rainy(day)∨passed(cleaning_car,road,day))",
+                                "references": [
+                                  "3"
+                                ]
                               }
                             }
                           }
