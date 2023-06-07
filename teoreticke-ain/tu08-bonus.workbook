@@ -1,0 +1,166 @@
+{
+  "versionNumber": 1,
+  "cells": {
+    "2": {
+      "id": 2,
+      "type": "text",
+      "data": "# Logika pre informatikov<br> 8. teoretické cvičenie<br> Prémiová úloha",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "4": {
+      "id": 4,
+      "type": "text",
+      "data": "**b)** :icon[tools] Pomocou prieskumníka štruktúr zostrojte štruktúru $\\Struct_1$ pre $\\Lang$,\n    ktorá bude modelom vašej teórie $T$.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "5": {
+      "id": 5,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"vegan/1, eats/2, veg_product/1, rides/2, old/1, hipster/1, wears/2, has_friend/2, owns/2, keeps/3, goat/1, meat/1, bicycle/1, beard/1, garden/1, fake_glasses/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"vegan\",\"arity\":1},{\"name\":\"eats\",\"arity\":2},{\"name\":\"veg_product\",\"arity\":1},{\"name\":\"rides\",\"arity\":2},{\"name\":\"old\",\"arity\":1},{\"name\":\"hipster\",\"arity\":1},{\"name\":\"wears\",\"arity\":2},{\"name\":\"has_friend\",\"arity\":2},{\"name\":\"owns\",\"arity\":2},{\"name\":\"keeps\",\"arity\":3},{\"name\":\"goat\",\"arity\":1},{\"name\":\"meat\",\"arity\":1},{\"name\":\"bicycle\",\"arity\":1},{\"name\":\"beard\",\"arity\":1},{\"name\":\"garden\",\"arity\":1},{\"name\":\"fake_glasses\",\"arity\":1}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{},\"predicates\":{\"vegan/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"eats/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"veg_product/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"rides/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"old/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"hipster/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"wears/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"has_friend/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"owns/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"keeps/3\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"goat/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"meat/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"bicycle/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"beard/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"garden/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"fake_glasses/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"Domain cannot be empty\",\"parsed\":[]}},\"expressions\":{\"formulas\":[],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "7": {
+      "id": 7,
+      "type": "text",
+      "data": "## Úloha B8.:cnt[a]\n\nZbierka: :xref[6.2.7]{.exbook label=\"úloha\"}.\n\n**a)** :icon[tools] Sformalizujte pomocou aplikácie formalization checker čo najvernejšie nasledujúce tvrdenia ako ucelenú teóriu $T=\\{A_1,\\dots,A_{11}\\}$\nv uvedenom jazyku $\\Lang$ relačnej logiky prvého rádu\ns nasledovným zamýšľaným významom predikátových symbolov:\n\n:::div{.table.table-intended-meaning.small}\n| Predikát | Zamýšľaný význam |   | Predikát | Zamýšľaný význam |\n|----------|------------------|---|----------|------------------|\n| vegan($x$) | $x$ je vegán\\*ka || eats($x$, $y$) | $x$ konzumuje $y$ |\n| veg_product($x$) | $x$ je rastlinný produkt || rides($x$, $y$) | $x$ jazdí na $y$ |\n| old($x$) | $x$ je starý\\*á\\*é || wears($x$, $y$) | $x$ nosí $y$ |\n| bicycle($x$) | $x$ je bicykel || has_friend($x$, $y$) | $x$ má kamaráta\\*ku $y$ |\n| beard($x$) | $x$ je brada || owns($x$, $y$) | $x$ vlastní $y$ |\n| hipster($x$) | $x$ je hipster\\*ka || keeps($x$, $y$, $z$) | $x$ chová $y$ na mieste $z$ |\n| goat($x$) | $x$ je koza || meat($x$) | $x$ je mäso |\n| garden($x$) | $x$ je záhrada || fake_glasses($x$) | $x$ sú falošné okuliare |\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "10": {
+      "id": 10,
+      "type": "text",
+      "data": "## Úloha B8.:cnt[a]\n\nZbierka: :xref[6.4.6]{.exbook label=\"úloha\"}.\n\nRozhodnite,\nči z teórie $T = \\{ A_1, \\ldots, A_4\\}$, kde\n\n$A_1 = \\A{\\vx} \\bigl(\\,\\E{\\vy}\\vphantom{\\ }\\sym{aces}(\\vx,\\vy) \\limpl \\bigl( (\\sym{studies\\_a\\_lot}(\\vx) \\lor \\sym{brilliant}(\\vx)) \\lor \\sym{lucky}(\\vx)\\bigr)\\,\\bigr)$  \n$A_2 = \\A{\\vx}\\A{\\vy} (\\sym{gets\\_grade}(\\vx,\\vy,\\sym{A}) \\limpl \\sym{aces}(\\vx,\\vy))$  \n$A_3 = \\A{\\vx} (\\sym{studies}(\\vx,\\sym{AIN}) \\limpl \\neg \\sym{lucky}(\\vx))$  \n$A_4 = \\A{\\vx} (\\sym{drinks\\_beer}(\\vx) \\limpl \\neg \\sym{studies\\_a\\_lot}(\\vx))$\n\nvyplýva formula:  \n\n$X = \\bigl(\\,\n        \\A{\\vx}\\bigl(\\,\n          \\sym{studies}(\\vx,\\sym{AIN}) \\limpl\n          \\E{\\vy}\\vphantom{\\ }\\sym{gets\\_grade}(\\vx,\\vy,\\sym{A})\n        \\,\\bigr)\n        \\limpl{}$    \n$\\mkern51mu\n        \\A{\\vx}\\bigl(\\,\n          (\\sym{studies}(\\vx,\\sym{AIN}) \\land \\sym{drinks\\_beer}(\\vx)) \\limpl\n            \\sym{brilliant}(\\vx)\n        \\,\\bigr)\n      \\,\\bigr)$\n    \n:icon[tools] Vyplývanie dokážte tablom. Nevyplývanie nájdením štruktúry.\n\n<div class=\"note bg-transparent p-0\">\n\n:icon[help]\nV prípade dokazovania vyplývania si najprv premyslite,\nprečo formula vyplýva, a následne tablom sledujte svoju úvahu.\nPravidlá pre kvantifikátory používajte, iba keď sú naozaj potrebné.\nČo najviac využite už známe výrokovologické korektné pravidlá\n(MP, MT, DS, NCS).\n\n:icon[technical]\nV editore tabiel používajte sadu pravidiel **Basic FOL**.\n\n:icon[warning]\nTablo by nemalo mať viac ako 35 uzlov.\n\n</div>",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "11": {
+      "id": 11,
+      "type": "text",
+      "data": ":icon[write]\n**Záver a zdôvodnenie:**\n…",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "17": {
+      "id": 17,
+      "type": "text",
+      "data": ":icon[deadline]\nVypracovanú prémiovú úlohu odovzdajte najneskôr v **stredu 19. 4. 2023 o 23:59**.\n\n:icon[bonus]\nZa včas odovzdané správne riešenie získate **1 bod**.\n\n:icon[technical]\nÚlohu riešte pomocou aplikácie [Logic Workbook](https://fmfi-uk-1-ain-412.github.io/workbook/)\nvo **vetve `tu08-bonus`**.\n\n::p[:span[[**Otvoriť túto úlohu v správnej vetve**](../../tu08-bonus/teoreticke-ain/tu08-bonus.workbook)]]{.ms-5}\n\nRiešenie občas uložte stlačením stlačením\n:span[Merge changes]{.border.border-success.text-success.p-1.rounded} na hornej lište.\n**Určite uložte posledné zmeny pred odovzdaním!**\n\n:icon[submission]\n**Úlohu odovzdáte** vytvorením pull requestu (PR)\ndo vetvy `tu08-bonus` v repozitári `FMFI-UK-1-AIN-412/lpi23-‹váš_uniba_login›`.\n**Skontrolujte**, či sa váš PR objaví v [zozname PR pre tu08-bonus](https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+user%3AFMFI-UK-1-AIN-412+base%3Atu08-bonus).\n\n:icon[envelope-at-fill]{.text-primary}\nAk narazíte na problémy alebo máte otázky, kontaktujte vyučujúcich:    \n`lpi-team` :icon[at] `lists.dai.fmph.uniba.sk`.\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "18": {
+      "id": 18,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 22,
+          "title": "2023 – Prémiová úloha 8.1",
+          "description": "Sformalizujte nasledujúce tvrdenia ako ucelenú teóriu v uvedenom jazyku logiky prvého rádu.",
+          "constants": "",
+          "predicates": "vegan/1, eats/2, veg_product/1, rides/2, old/1, hipster/1, wears/2, has_friend/2, owns/2, keeps/3, goat/1, meat/1, bicycle/1, beard/1, garden/1, fake_glasses/1",
+          "functions": "",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 826,
+              "proposition": "1. Vegán konzumuje iba rastlinné produkty.",
+              "solution": null
+            },
+            {
+              "proposition_id": 827,
+              "proposition": "2. Kto jazdí na starom bicykli, je hipster.",
+              "solution": null
+            },
+            {
+              "proposition_id": 828,
+              "proposition": "3. Kto nosí bradu a falošné okuliare, je hipster.",
+              "solution": null
+            },
+            {
+              "proposition_id": 829,
+              "proposition": "4. Každý vegán má aspoň jedného kamaráta, ktorý konzumuje mäso.",
+              "solution": null
+            },
+            {
+              "proposition_id": 830,
+              "proposition": "5. Žiadne mäso nie je rastlinný produkt.",
+              "solution": null
+            },
+            {
+              "proposition_id": 831,
+              "proposition": "6. Každý hipster, ktorý má záhradu, v nej chová kozu.",
+              "solution": null
+            },
+            {
+              "proposition_id": 832,
+              "proposition": "7. Každý hipster má za kamarátov len hipsterských vegánov.",
+              "solution": null
+            },
+            {
+              "proposition_id": 833,
+              "proposition": "8. Žiadny vegán nikde nechová žiadnu kozu, ktorá konzumuje mäso.",
+              "solution": null
+            },
+            {
+              "proposition_id": 834,
+              "proposition": "9. Kamarátstvo nie je vždy vzájomné.",
+              "solution": null
+            },
+            {
+              "proposition_id": 835,
+              "proposition": "10. Je taká koza, ktorá má za kamarátov všetkých hipsterov.",
+              "solution": null
+            },
+            {
+              "proposition_id": 836,
+              "proposition": "11. Niekto jazdí na aspoň dvoch bicykloch, z ktorých práve jeden je starý.",
+              "solution": null
+            }
+          ]
+        },
+        "exerciseId": 22
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    }
+  },
+  "cellsOrder": [
+    2,
+    17,
+    7,
+    18,
+    4,
+    5,
+    10,
+    11
+  ],
+  "settings": {
+    "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n"
+  }
+}

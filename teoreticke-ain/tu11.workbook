@@ -1,0 +1,312 @@
+{
+  "versionNumber": 1,
+  "cells": {
+    "1": {
+      "id": 1,
+      "type": "text",
+      "data": "::::header\n:::hgroup\n::p[Logika pre informatikov]{.h2}\n# 11. teoretické cvičenie\n:::\n\n:::div{.dl-indented}\n:icon[deadline] Termín odovzdania\n:   nedeľa 7. 5. 2023 o 23:59\n\n:icon[bonus] Hodnotenie\n:   0,5 boda za včas odovzdané úplne vypracované cvičenie bez vážnych chýb\n\n:icon[diagram-2-fill]{.text-primary} Vetva repozitára\n: `tu11`\n: :span[[Otvoriť toto cvičenie v správnej vetve](../../tu11/teoreticke-ain/tu11.workbook)]\n\n:icon[save-fill]{.text-success} Uloženie riešenia do vetvy\n: Stlačte :span[Merge changes]{.border.border-success.text-success.p-1.rounded} na hornej lište\n: **Určite uložte posledné zmeny pred odovzdaním!**\n\n:icon[submission] Odovzdanie\n: Vytvorte pull request (PR) **do vetvy `tu11`** v repozitári `FMFI-UK-1-AIN-412/lpi23-‹váš_uniba_login›`\n: Správne vytvorený PR nájdete v [zozname PR pre tu11](https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+user%3AFMFI-UK-1-AIN-412+base%3Atu11)\n\n:icon[envelope-at-fill]{.text-primary} Kontakt na vyučujúcich\n: `lpi-team` :icon[at] `lists.dai.fmph.uniba.sk`.\n\n:::\n\n::::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "3": {
+      "id": 3,
+      "type": "text",
+      "data": ":::hgroup\n## Cvičenie 11.:cnt[a]\n::p[Explicitné definície pojmov]{.h4}\n:::\n\nZbierka: :xref[7.5.1]{.exbook label=\"príklad\"}.\n\nUvažujme doménu rodinných vzťahov,\nktorú opisujeme jazykom $\\Lang$ logiky prvého rádu,\nktorý obsahuje predikáty ako\n$\\sym{woman}^1$, $\\sym{man}^1$, $\\sym{parent}^2$, $\\sym{sibling}^2$, $\\sym{married}^2$\nso zamýšľaným významom:\n\n:::div{.table.table-intended-meaning.small}\n\n| Predikát             | Význam                           |\n|----------------------|----------------------------------|\n| $\\sym{woman}(x)$     | $x$ je žena                      |\n| $\\sym{man}(x)$       | $x$ je muž                       |\n| $\\sym{parent}(x,y)$  | $x$ je (vlastným) rodičom $y$    |\n| $\\sym{sibling}(x,y)$ | $x$ je (pokrvným) súrodencom $y$ |\n| $\\sym{married}(x,y)$ | $x$ a $y$ sú manželmi            |\n\n:::\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "4": {
+      "id": 4,
+      "type": "text",
+      "data": ":icon[tools] Pomocou aplikácie Formalization Checker sformalizujte definície nasledovných odvodených pojmov\n(tak, ako ich poznáte z prirodzeného jazyka)\na zapíšte ich ako definície predikátov, ktorými rozšírime jazyk $\\Lang$:\n\n:::div{.table.table-intended-meaning.small}\n\n| Ozn. definície | Predikát             | Význam                           |\n|----------------|----------------------|----------------------------------|\n|$D_1$ | $\\sym{great\\_grandparent}(x,y)$ | $x$ je prastarým rodičom $y$-a    |\n|$D_2$ | $\\sym{cousin}(x,y)$ | $x$ je sesternica/bratranec $y$-a |\n|$D_3$ | $\\sym{only\\_child}(x)$ | $x$ je jedináčik |\n|:div[:icon[house-fill]{.text-primary} Domáca časť]{.h4.mt-1.mb-0} ||\n$D_4$ | $\\sym{stepmother}(x,y)$ | $x$ je macochou $y$-a |\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "5": {
+      "id": 5,
+      "type": "text",
+      "data": ":::hgroup\n## Cvičenie 11.:cnt[a]\n::p[Sémantika explicitných definícií]{.h4}\n:::\n\nZbierka: :xref[7.5.2]{.exbook label=\"úloha\"}.\n\n**a)** :icon[tools] Zostrojte štruktúru $\\Struct = (D,i)$\npre jazyk z predchádzajúcej úlohy ďalej rozšírený o symboly konštánt\n$\\sym{Alice}$, $\\sym{Carl}$, $\\sym{Bob}$, $\\sym{Diana}$\ntak, aby v $\\Struct$ boli pravdivé všetky definície predikátov z cvičenia 11.1\na súčasne nasledujúce formuly:\n\n$A_1 = (\\,\n        (\\sym{parent}(\\sym{Alice},\\sym{Carl}) \\land\n         \\E{\\vx}\\sym{parent}(\\sym{Alice},\\vx))\n        \\land\n        \\sym{parent}(\\sym{Bob},\\sym{Diana})\n      \\,)$,\n\n$A_2 = \n        \\E{\\vx}\\E{\\vy}\\E{\\vz}(\\,\n            (\\sym{parent}(\\vx,\\sym{Alice}) \\land\n              (\\sym{parent}(\\vx,\\sym{Bob}) \\land\n               \\sym{woman}(\\vx)) )\n            \\land \n            (\\sym{parent}(\\vy,\\sym{Alice}) \\land\n              \\sym{parent}(\\vz,\\sym{Alice}))\n        \\,)$,\n\n$A_3 = (\\,\n    \\A{\\vx}\\lnot\\sym{parent}(\\vx,\\vx) \\land\n    \\A{\\vx}\\A{\\vy}(\\sym{parent}(\\vx,\\vy) \\limpl \\lnot\\sym{parent}(\\vy,\\vx))\n  \\,)$,\n\n$A_4 = \\A{\\vx}\n        (\\,(\\sym{woman}(\\vx) \\lor \\sym{man}(\\vx)) \\land\n              \\lnot(\\sym{woman}(\\vx) \\land \\sym{man}(\\vx))\\,)$,\n\n$A_5 = \\A{\\vx}\\A{\\vy}( \\sym{parent}(\\vx,\\vy) \\limpl\n         \\E{\\vz}( \\sym{parent}(\\vz,\\vy) \\land\n             (\\sym{man}(\\vx) \\lequiv \\lnot\\sym{man}(\\vz)) ) )$,\n\n$A_6 = \\A{\\vp}\\A{\\vr}\\A{\\vx}\n        (\\,( (\\sym{parent}(\\vp,\\vx) \\land \\sym{parent}(\\vr,\\vx)) \\land\n         (\\sym{woman}(\\vp) \\lequiv \\sym{woman}(\\vr)) ) \\limpl\n        \\vp \\doteq \\vr  \\,)$,\n\n$A_7 = \\A{\\vx}\\A{\\vy}(\\, \n        \\sym{sibling}(\\vx,\\vy) \\lequiv\n            (\\,\\lnot\\,\\vx \\doteq \\vy \\land\n              \\exists \\vz( \\sym{parent}(\\vz,\\vx) \\land\n                           \\sym{parent}(\\vz,\\vy))\n            \\,)\n     \\,)$;\n\n$B_1 = \\E{\\vx}\\E{\\vy}\\sym{great\\_grandparent}(\\vx,\\vy)$,\n\n$B_2 = \\E{\\vx}(\\,\n            \\sym{only\\_child}(\\vx) \\land\n            \\A{\\vy}(\\sym{parent}(\\vy,\\vx) \\limpl \\sym{only\\_child}(\\vy))\n          \\,)$.\n\n::h3[:icon[house-fill]{.text-primary} Domáca časť]{.h4}\n\n**b)** Upravte model, aby bola súčasne splnená aj formula:\n\n$B_3 = \\E{\\vx}\\E{\\vy}(\\sym{stepmother}(\\vx,\\vy) \\land \\E{\\vz}\\sym{parent}(\\vx,\\vz))$.\n\n:::div{.note.bg-transparent.p-0}\n\nVšímajte si, ktoré formuly skutočne vynútia pridanie nových objektov\ndo domény a ktoré splníte aj pomocou existujúcich objektov.\n\n:icon[warning] Nezabudnite, že na splnenie definície nejakého predikátu\n  musíte zabezpečiť, aby súčasne:\n\n* všetky objekty ($n$-tice), ktoré patria do interpretácie predikátu, mali vlastnosti požadované definíciou;\n* všetky objekty ($n$-tice), ktoré majú požadované vlastnosti, patrili do interpretácie predikátu.\n\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "7": {
+      "id": 7,
+      "type": "text",
+      "data": ":::hgroup\n## Cvičenie 11.:cnt[a]\n::p[Dôkazy s explicitnými definíciami]{.h4}\n:::\n\nZbierka: :xref[7.5.3]{.exbook label=\"úloha\"}.\n\n:icon[tools] Dokážte, že z teórie, pozostávajúcej zo sformalizovaných tvrdení:\n\n1. Definícia $A_7$ pojmu súrodenec z cvičenia 11.2.\n2. Definícia $D_2$ pojmu sesternica/bratranec z cvičenia 11.1.\n3. Definícia $D_3$ pojmu jedináčik z cvičenia 11.1.\n4. Každý rodičovský pár má svoje najstaršie dieťa.\n   \n   $\\A{\\vx}\\A{\\vy}(\\,(\\,\\vx \\not\\doteq \\vy \\land \\E{\\vz} (\\,\\sym{parent}(\\vx,\\vz) \\land \\sym{parent}(\\vy,\\vz)\\,)\\,) \\limpl\n  (\\,\\sym{parent}(\\vx,\\sym{oldest\\_child}(\\vx,\\vy)) \\land \\sym{parent}(\\vy,\\sym{oldest\\_child}(\\vx,\\vy))\\,)\\,)$\n5. Najstaršie dieťa rodičovského páru je staršie ako všetky ostatné deti tohto páru.\n\n    $\\A{\\vx}\\A{\\vy}\\A{\\vz}(\\,\n    (\\, (\\,(\\,\\sym{parent}(\\vx,\\vz) \\land \\sym{parent}(\\vy,\\vz)\\,)\n       \\land \\vx \\not\\doteq \\vy\\,)\n    \\land \\sym{oldest\\_child}(\\vx,\\vy) \\not\\doteq \\vz\\,)\n    \\limpl\n    \\sym{older}(\\sym{oldest\\_child}(\\vx,\\vy), \\vz)\\,)$\n\nVyplýva:\n\n**a)** Vzťah <i>byť súrodencom</i> je symetrický.\n\n$C_1 = \\A{\\vx}\\A{\\vy}(\\sym{sibling}(\\vx,\\vy)\\limpl\\sym{sibling}(\\vy,\\vx))$\n\n:::aside{.note.bg-white.p-0}\n:icon[technical] V editore tabiel vyberte sadu pravidiel _Full FOL_,\nktorá obsahuje aj pravidlá $\\gamma^*$ a $\\delta^*$.\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "8": {
+      "id": 8,
+      "type": "text",
+      "data": "::h3[:icon[house-fill]{.text-primary} Domáca časť]{.h4}\n \n**c)** Dieťa jedináčikov nemá žiadne sesternice/bratrancov.\n\n$C_3 = …$",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "9": {
+      "id": 9,
+      "type": "text",
+      "data": "## :icon[house-fill]{.text-primary} Odporúčané domáce cvičenie 11.:cnt[a]\n\nZbierka: :xref[7.3.3]{.exbook label=\"úloha\"}.\n\nDokážte, že nasledujúce formuly sú platné, resp. vyplývajú z uvedenej teórie:\n\n**a)** $\\entails\\E{\\vx}( \\sym{drinks}(\\vx) \\limpl \\A{\\vy}\\sym{drinks}(\\vy) )$,\n\n**b)** $\\entails\n            \\A{\\vx}( \\E{\\vy}\\sym{knows}(\\vx,\\sym{father}(\\vy)) \\limpl\n                \\E{\\vy}\\sym{knows}(\\vx,\\vy) )$,\n\n**c)** $\\{\n        \\A{\\vx}( \\sym{social}(\\sym{best\\_friend}(\\vx)) \\limpl\n                  \\E{\\vy}\\sym{knows}(\\vx,\\sym{best\\_friend}(\\vy)) )\n      \\}\\entails\n        \\E{\\vx}( \\sym{social}(\\vx) \\limpl\n                  \\A{\\vy}\\E{\\vz} \\sym{knows}(\\sym{mother}(\\vy),\\vz) )$.\n\n:::div{.note.bg-transparent.p-0}\n\n:icon[explanation] Dôkazy platnosti prvých dvoch formúl sú prípravou na dôkaz vyplývania v tretej časti.\n\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "10": {
+      "id": 10,
+      "type": "text",
+      "data": "## :icon[homework] Odporúčané domáce cvičenie 11.:cnt[a]<br>(príprava na skúšku)\n\nZbierka: :xref[4.3.5]{.exbook label=\"príklad\"}.\n\nZadefinujte vzťah _z teórie $T$ vyplýva formula $X$_ ($T \\pentails X$)\na pojem _nesplniteľná formula_ vo výrokovologickej časti logiky prvého rádu.\n\nDokážte alebo vyvráťte:\n  Nech $S$ je množina výrokovologických formúl\n  a nech $X$ je výrokovologická formula.\n  Ak $X$ je nesplniteľná a $S \\pentails X$, tak $S$ je nesplniteľná.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "24": {
+      "id": 24,
+      "type": "text",
+      "data": "::h3[:icon[house-fill]{.text-primary} Odporúčaná domáca časť]{.h4}\n\n**d)** Každý jedináčik je najstarším dieťaťom svojho rodičovského páru.\n\n$C_4 = …$",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "29": {
+      "id": 29,
+      "type": "text",
+      "data": "**b)** Pre každých dvoch jedináčikov platí, že nie sú súrodenci.\n\n$C_2 = \\A{\\vx}\\A{\\vy} (\\, (\\,\\sym{only\\_child}(\\vx) \\land \\sym{only\\_child}(\\vy)\\,)\n  \\limpl \\neg \\sym{sibling}(\\vx,\\vy) \\,)$\n\n::::aside{.note.bg-white.p-0}\n:h6[:span[:icon[help] Pomôcka.]{.small}]{.d-inline}\nV dôkaze budete možno potrebovať využiť,\nže súrodenectvo je symetrický vzťah,\nteda formulu $C_1$.\n\nNie je ťažké presvedčiť sa\n(odporúčame vám to v rámci prípravy na skúšku),\nže platí nasledujúce tvrdenie:\n<i>\nNech $T$ je teória, $X$ je formula a $T \\entails X$.\nPotom pre každú formulu $Y$ platí,\nže $T \\entails Y$ vtt $T \\cup \\{X\\} \\entails Y$.\n</i>\n\nPretože v časti a) ste dokázali, že $T \\entails C_1$,\npodľa tohto tvrdenia na dôkaz $T \\entails C_2$ stačí dokázať,\nže $C_2$ vyplýva z teórie $T$ rozšírenej o $C_1$,\na teda stačí nájsť uzavreté tablo pre množinu označených formúl $S^+ = \\{ \\sign{T}A \\mid A \\in T \\} \\cup \\{ \\sign{T} C_1 \\} \\cup \\{ \\sign{F} C_2 \\}$.\n\nTablo pripravené nižšie už označenú formulu $\\sign{T} C_1$ obsahuje.\n\nTento postup môžete využiť aj v ďalších častiach\ntohto cvičenia a v prémiovej úlohe `tu10-bonus`.\n::::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "30": {
+      "id": 30,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Alice,  Carl,  Bob,  Diana\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Alice\",\"Carl\",\"Bob\",\"Diana\"]},\"predicates\":{\"value\":\"woman/1, man/1, parent/2, sibling/2, married/2, great_grandparent/2, cousin/2, only_child/1, stepmother/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"woman\",\"arity\":1},{\"name\":\"man\",\"arity\":1},{\"name\":\"parent\",\"arity\":2},{\"name\":\"sibling\",\"arity\":2},{\"name\":\"married\",\"arity\":2},{\"name\":\"great_grandparent\",\"arity\":2},{\"name\":\"cousin\",\"arity\":2},{\"name\":\"only_child\",\"arity\":1},{\"name\":\"stepmother\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{\"Alice\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]},\"Carl\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]},\"Bob\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]},\"Diana\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]}},\"predicates\":{\"woman/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"man/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"parent/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"sibling/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"married/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"great_grandparent/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"cousin/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"only_child/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"stepmother/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"Domain cannot be empty\",\"parsed\":[]}},\"expressions\":{\"formulas\":[{\"value\":\"((parent(Alice,Carl) ∧ ∃x parent(Alice,x)) ∧ parent(Bob,Diana))\",\"expressionValue\":null,\"answerValue\":true,\"errorMessage\":\"The interpretation of the constant Alice is not defined\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"Alice\"},{\"name\":\"Carl\"}]},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"parent\",\"terms\":[{\"name\":\"Alice\"},{\"name\":\"x\"}]}}},\"subRight\":{\"name\":\"parent\",\"terms\":[{\"name\":\"Bob\"},{\"name\":\"Diana\"}]}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x∃y∃z((parent(x,Alice) ∧ (parent(x,Bob) ∧ woman(x))) ∧ (parent(y,Alice) ∧ parent(z,Alice)))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"variableName\":\"z\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Alice\"}]},\"subRight\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Bob\"}]},\"subRight\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]}}},\"subRight\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"y\"},{\"name\":\"Alice\"}]},\"subRight\":{\"name\":\"parent\",\"terms\":[{\"name\":\"z\"},{\"name\":\"Alice\"}]}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(∀x ¬parent(x,x) ∧ ∀x∀y(parent(x,y) → ¬parent(y,x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"subFormula\":{\"name\":\"parent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"x\"}]}}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"subFormula\":{\"name\":\"parent\",\"terms\":[{\"name\":\"y\"},{\"name\":\"x\"}]}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x((woman(x) ∨ man(x)) ∧ ¬(woman(x) ∧ man(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"subFormula\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x∀y(parent(x,y) → ∃z(parent(z,y) ∧ (man(x) ↔ ¬man(z))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"variableName\":\"z\",\"subFormula\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"z\"},{\"name\":\"y\"}]},\"subRight\":{\"subLeft\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"man\",\"terms\":[{\"name\":\"z\"}]}}}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀p∀r∀x( ( (parent(p,x) ∧ parent(r,x)) ∧ (woman(p) ↔ woman(r)) ) → p≐r )\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"p\",\"subFormula\":{\"variableName\":\"r\",\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"p\"},{\"name\":\"x\"}]},\"subRight\":{\"name\":\"parent\",\"terms\":[{\"name\":\"r\"},{\"name\":\"x\"}]}},\"subRight\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"p\"}]},\"subRight\":{\"name\":\"woman\",\"terms\":[{\"name\":\"r\"}]}}},\"subRight\":{\"subLeft\":{\"name\":\"p\"},\"subRight\":{\"name\":\"r\"}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x∀y(sibling(x,y) ↔ ( x ≠ y ∧ ∃z(parent(z,x) ∧ parent(z,y))))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"sibling\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"subLeft\":{\"subFormula\":{\"subLeft\":{\"name\":\"x\"},\"subRight\":{\"name\":\"y\"}}},\"subRight\":{\"variableName\":\"z\",\"subFormula\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"z\"},{\"name\":\"x\"}]},\"subRight\":{\"name\":\"parent\",\"terms\":[{\"name\":\"z\"},{\"name\":\"y\"}]}}}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x∃y great_grandparent(x,y)\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"great_grandparent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x(only_child(x) ∧ ∀y(parent(y,x) → only_child(y)))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"only_child\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"parent\",\"terms\":[{\"name\":\"y\"},{\"name\":\"x\"}]},\"subRight\":{\"name\":\"only_child\",\"terms\":[{\"name\":\"y\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"vaša definícia predikátu great_grandparent\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"Expected equality symbol or non-equality symbol but \\\"d\\\" found.\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":null,\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"vaša definícia predikátu cousin\",\"expressionValue\":null,\"answerValue\":true,\"errorMessage\":\"Expected equality symbol or non-equality symbol but \\\"d\\\" found.\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":null,\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"vaša definícia predikátu only_child\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"Expected equality symbol or non-equality symbol but \\\"d\\\" found.\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":null,\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"vaša definícia predikátu stepmother\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"Expected equality symbol or non-equality symbol but \\\"d\\\" found.\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":null,\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"∃x∃y(stepmother(x,y) ∧ ∃z parent(x,z))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"stepmother\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"variableName\":\"z\",\"subFormula\":{\"name\":\"parent\",\"terms\":[{\"name\":\"x\"},{\"name\":\"z\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "31": {
+      "id": 31,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ∀y ( sibling(x, y) ↔ ( ¬ x ≐ y ∧ ∃z ( parent(z, x) ∧ parent(z, y) ) ) )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T vasa_definicia_predikatu_cousin",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T vasa_definicia_predikatu_only_child",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ∀x ∀y ( ( ¬ x ≐ y ∧ ∃z ( parent(x, z) ∧ parent(y, z) ) ) → ( parent(x, oldest_child(x, y)) ∧ parent(y, oldest_child(x, y)) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ∀x ∀y ∀z ( ( ( ( parent(x, z) ∧ parent(y, z) ) ∧ ¬ x ≐ y ) ∧ ¬ oldest_child(x, y) ≐ z ) → older(oldest_child(x, y), z) )",
+                  "references": []
+                },
+                "child": {
+                  "type": "open",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∀x ∀y ( sibling(x, y) → sibling(y, x) )",
+                    "references": []
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "32": {
+      "id": 32,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ∀y ( sibling(x, y) ↔ ( ¬ x ≐ y ∧ ∃z ( parent(z, x) ∧ parent(z, y) ) ) )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T vasa_definicia_predikatu_cousin",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T vasa_definicia_predikatu_only_child",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ∀x ∀y ( ( ¬ x ≐ y ∧ ∃z ( parent(x, z) ∧ parent(y, z) ) ) → ( parent(x, oldest_child(x, y)) ∧ parent(y, oldest_child(x, y)) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ∀x ∀y ∀z ( ( ( ( parent(x, z) ∧ parent(y, z) ) ∧ ¬ x ≐ y ) ∧ ¬ oldest_child(x, y) ≐ z ) → older(oldest_child(x, y), z) )",
+                  "references": []
+                },
+                "child": {
+                  "type": "assumption",
+                  "node": {
+                    "id": 6,
+                    "value": "T ∀x ∀y ( sibling(x, y) → sibling(y, x) )",
+                    "references": []
+                  },
+                  "child": {
+                    "type": "open",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∀x ∀y ( ( only_child(x) ∧ only_child(y) ) → ¬ sibling(x, y) )",
+                      "references": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "33": {
+      "id": 33,
+      "type": "text",
+      "data": "## Prémiová úloha `tu10-bonus`\n\n:icon[bonus]\nĎalšie skúsenosti a 1 bod môžete získať vyriešením prémiovej úlohy k tomuto a predchádzajúcemu cvičeniu.\n\n:::div{.dl-indented.dl-inset}\n:icon[file-earmark-ruled-fill]{.text-primary} Pracovný hárok prémiovej úlohy\n: :span[[tu10-bonus](../../tu10-bonus/teoreticke-ain/tu10-bonus.workbook)]{.text-nowrap}\n\n:icon[deadline] Termín odovzdania\n: utorok 9. 5. 2023 o 23:59",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "34": {
+      "id": 34,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 27,
+          "title": "2023 – Cvičenie 11.1",
+          "description": "",
+          "constants": "",
+          "predicates": "woman/1, man/1, parent/2, sibling/2, married/2, great_grandparent/2, cousin/2, only_child/1, stepmother/2",
+          "functions": "",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 991,
+              "proposition": "1. Definujte vzťah „prastarý rodič“ (great_grandparent).",
+              "solution": null
+            },
+            {
+              "proposition_id": 992,
+              "proposition": "2. Definujte vzťah „sesternica/bratranec“ (cousin).",
+              "solution": null
+            },
+            {
+              "proposition_id": 993,
+              "proposition": "3. Definujte vlastnosť „jedináčik“ (only_child).",
+              "solution": null
+            },
+            {
+              "proposition_id": 994,
+              "proposition": "4. Definujte vzťah „macocha“ (stepmother).",
+              "solution": null
+            }
+          ]
+        },
+        "exerciseId": 27
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    }
+  },
+  "cellsOrder": [
+    1,
+    33,
+    3,
+    4,
+    34,
+    5,
+    30,
+    7,
+    31,
+    29,
+    32,
+    8,
+    24,
+    9,
+    10
+  ],
+  "settings": {
+    "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n\\newcommand{\\Tabl}{\\mathcal{T}}\n\n\\newcommand\\sign[1]{\\mathop{\\text{\\textsf{\\textbf{#1}}}}\\nolimits}"
+  }
+}

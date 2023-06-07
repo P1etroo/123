@@ -1,0 +1,213 @@
+{
+  "versionNumber": 1,
+  "cells": {
+    "1": {
+      "id": 1,
+      "type": "text",
+      "data": "# Logika pre informatikov<br/>8. teoretické cvičenie",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "2": {
+      "id": 2,
+      "type": "text",
+      "data": "## Cvičenie 8.:cnt[a]\nZbierka: :xref[6.1.1]{.exbook label=\"úloha\"}.\n\n:icon[tools] Pomocou aplikácie Formalization checker sformalizujte nižšie uvedené výroky ako ucelenú teóriu $T = \\{A_1, \\ldots, A_{16}\\}$\nv danom jazyku $\\Lang$.\n\nZamýšľaný význam predikátových symbolov je:\n\n:::div{.table.table-intended-meaning.small}\n| Predikátový symbol            | Zamýšľaný význam |\n|-------------------------------|------------------|\n| phd_student($x$)              | $x$ je doktorand\\*ka  |\n| human($x$)                    | $x$ je človek         |\n| student($x$)                  | $x$ je študent\\*ka    |\n| teacher($x$)                  | $x$ je učiteľ\\*ka     |\n| full_prof($x$)                | $x$ je profesor\\*ka   |\n| assistant_prof($x$)           | $x$ je asistent\\*ka   |\n| associate_prof($x$)           | $x$ je docent\\*ka     |\n| course($x$)                   | $x$ je predmet/kurz   |\n| popular($x$)                  | $x$ je obľúbený\\*á    |\n| smart($x$)                    | $x$ je bystrý\\*á      |\n| happy($x$)                    | $x$ je šťastný\\*á     |\n| supervisor($x$, $y$)          | $x$ je školiteľom\\*kou (študenta\\*ky) $y$ |\n| teaches($x$, $y$)             | $x$ učí $y$ |\n| teaching_assistant($x$, $y$)  | $x$ je cvičiaci\\*a na (predmete) $y$ |\n| aced($x$, $y$)                | $x$ absolvoval\\*a s vyznamenaním (predmet) $y$ |\n| passed($x$, $y$)              | $x$ absolvoval\\*a (predmet) $y$ |\n| enrolled_in($x$, $y$)         | $x$ je zapísaný\\*á na (predmete) $y$ |\n| likes($x$, $y$)               | $x$ obľubuje $y$ |\n\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "3": {
+      "id": 3,
+      "type": "text",
+      "data": "## Cvičenie 8.:cnt[a]\nZbierka: :xref[6.2.1]{.exbook label=\"úloha\"}.\n\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu,\nkde $\\Consts = \\{\\sym{Bob},$ $\\sym{Eva},$ $\\sym{Karen}\\}$, $\\Preds = \\{\\sym{man}^1,$ $\\sym{woman}^1,$ $\\sym{married}^2\\}$.\nNech $\\Struct = (D,i)$ je štruktúra pre jazyk $\\Lang$,\nkde:\n$$\n\\begin{align*}\n  D &= \\{ 1, 2, 3\\}\n  \\\\\n  i(\\sym{Eva}) &= 1\n  &\n  i(\\sym{man}) &= \\{2\\}\n  \\\\\n  i(\\sym{Karen}) &= 1\n  &\n  i(\\sym{woman}) &= \\{1\\}\n  \\\\\n  i(\\sym{Bob}) &= 3\n  &\n  i(\\sym{married}) &= \\{(1,1),(1,2),(2,1)\\}\n\\end{align*}\n$$\n\n:icon[tools]\nZistite, či sú nižšie uvedené formuly pravdivé alebo nepravdivé v štruktúre $\\Struct$.\nSvoje odpovede overte pomocou aplikácie Structure Explorer.\n\n**Snažte sa pochopiť prečo** sú formuly pravdivé resp. nepravdivé.\nAk sa pomýlite, s pochopením problému vám môže pomôcť Henkinova-Hintikkova hra (:icon[controller]).",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "5": {
+      "id": 5,
+      "type": "text",
+      "data": "## Cvičenie 8.:cnt[a]\nZbierka: :xref[6.2.2]{.exbook label=\"úloha\"}.\n\nNech $\\Lang$ je jazyk relačnej logiky prvého rádu,\nkde $\\Consts = \\{\\sym{Math}\\}$, $\\Preds = \\{\\sym{depressive}^1,$ $\\sym{lazy}^1,$ $\\sym{hard\\_working}^1,$ $\\sym{student}^1,$ $\\sym{successful}^1,$ $\\sym{likes}^2\\}$\nso zamýšľaným významom symbolov:\n\n:::div{.table.table-intended-meaning.small}\n| Symbol | Zamýšľaný význam | | Symbol | Zamýšľaný význam |\n|--------|------------------|-|-|-|\n| Math   | Matematika       || likes($x$, $y$) | $x$ má rád*rada/obľubuje $y$ |\n| student($x$) | $x$ je študent*ka || depressive($x$) | $x$ je depresívny*a |\n| lazy($x$) | $x$ je lenivý*á || successful($x$) | $x$ je úspešný*á |\n| hard_working($x$) | $x$ je usilovný*á |\n:::\n\n**a)** :icon[write] Každú z nasledujúcich formúl preložte do čo najprirodzenejšieho slovenského tvrdenia.\n\n$A_1 = \\A{\\vx}(\\sym{student}(\\vx) \\limpl (\\sym{hard\\_working}(\\vx) \\lor \\sym{lazy}(\\vx)))$  \n...\n\n$A_2 = \\A{\\vx}(\\sym{hard\\_working}(\\vx) \\limpl \\neg \\sym{lazy}(\\vx))$  \n...\n\n$A_3 = (\\E{\\vx}(\\sym{student}(\\vx) \\land \\sym{lazy}(\\vx)) \\land \\E{\\vx}(\\sym{student}(\\vx) \\land \\neg \\sym{lazy}(\\vx)))$  \n...\n\n$A_4 = \\A{\\vx}(\\sym{student}(\\vx) \\limpl (\\sym{hard\\_working}(\\vx) \\limpl \\sym{likes}(\\vx,\\sym{Math})))$  \n...\n\n$A_5 = \\A{\\vx}(\\sym{likes}(\\vx,\\sym{Math}) \\limpl \\sym{successful}(\\vx))$  \n...\n\n$A_6 = (\\lnot\\A{\\vx}\\lnot\\sym{hard\\_working}(\\vx) \\limpl \\neg\\E{\\vx}(\\neg\\sym{depressive}(\\vx) \\land \\sym{successful}(\\vx)))$  \n...\n\n$A_7 = \\neg\\A{\\vx}(\\neg\\sym{successful}(\\vx) \\limpl \\neg\\sym{depressive}(\\vx))$  \n...\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "8": {
+      "id": 8,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Math\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Math\"]},\"predicates\":{\"value\":\"depressive/1, lazy/1, hard_working/1, student/1, successful/1, likes/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"depressive\",\"arity\":1},{\"name\":\"lazy\",\"arity\":1},{\"name\":\"hard_working\",\"arity\":1},{\"name\":\"student\",\"arity\":1},{\"name\":\"successful\",\"arity\":1},{\"name\":\"likes\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{\"Math\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"An interpretation of this constant must be defined\",\"parsed\":[]}},\"predicates\":{\"depressive/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"lazy/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"student/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"successful/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"likes/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"hard_working/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"Domain cannot be empty\",\"parsed\":[]}},\"expressions\":{\"formulas\":[{\"value\":\"∀x(student(x)→(hard_working(x)∨lazy(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"student\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"name\":\"hard_working\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"lazy\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(hard_working(x)→¬lazy(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"hard_working\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"lazy\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(∃x(student(x)∧lazy(x))∧∃x(student(x)∧¬lazy(x)))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"student\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"lazy\",\"terms\":[{\"name\":\"x\"}]}}},\"subRight\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"student\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"lazy\",\"terms\":[{\"name\":\"x\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(student(x)→(hard_working(x)→likes(x,Math)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"student\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subLeft\":{\"name\":\"hard_working\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"likes\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Math\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(likes(x,Math)→successful(x))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"likes\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Math\"}]},\"subRight\":{\"name\":\"successful\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"(¬∀x¬hard_working(x)→¬∃x(¬depressive(x)∧successful(x)))\",\"expressionValue\":true,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subFormula\":{\"name\":\"hard_working\",\"terms\":[{\"name\":\"x\"}]}}}},\"subRight\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subFormula\":{\"name\":\"depressive\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"name\":\"successful\",\"terms\":[{\"name\":\"x\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"¬∀x(¬successful(x)→¬depressive(x))\",\"expressionValue\":false,\"answerValue\":true,\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subFormula\":{\"name\":\"successful\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"subFormula\":{\"name\":\"depressive\",\"terms\":[{\"name\":\"x\"}]}}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "9": {
+      "id": 9,
+      "type": "text",
+      "data": "**b)** :icon[tools] Zostrojte štruktúru $\\Struct$ pre jazyk $\\Lang$ tak,\naby bola modelom teórie tvorenej všetkými vyššie uvedenými formulami.\n\nAk vám nie je jasné, prečo niektorá formula vo vašej štruktúre nie je pravdivá,\n**snažte sa pochopiť**, kde je problém, nie iba slepo skúšať!\nS pochopením vám môže pomôcť Henkinova-Hintikkova hra (:icon[controller]).",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "11": {
+      "id": 11,
+      "type": "text",
+      "data": ":icon[deadline]\nVypracované cvičenie odovzdajte najneskôr v **utorok 11. 4. 2023 o 23:59**.\n\n:icon[bonus]\nZa včas odovzdané úplne vypracované cvičenie **bez vážnych chýb**\nzískate **0,5 boda** a **spätnú väzbu** na prípadné chyby.\n\n:icon[technical]\nCvičenie riešte vo **vetve `tu08`** vo **svojom repozitári**\n`‹váš_GitHub_login›/lpi23-‹váš_uniba_login›`.\n\n:p[[**Otvoriť toto cvičenie v správnej vetve**](../../tu08/teoreticke-ain/tu08.workbook)]{.mx-5}\n\nRiešenie občas uložte stlačením stlačením\n:span[Merge changes]{.border.border-success.text-success.p-1.rounded} na hornej lište.\n\n:icon[submission]\n**Cvičenie odovzdáte** vytvorením pull requestu (PR)\ndo vetvy `tu08` v repozitári `FMFI-UK-1-AIN-412/lpi23-‹váš_uniba_login›`.\n**Skontrolujte**, či sa váš PR objaví v [**zozname PR pre tu08**](https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+user%3AFMFI-UK-1-AIN-412+base%3Atu08).\n\n:icon[envelope-at-fill]{.text-primary}\n**Otázky** pre vyučujúcich mimo kontaktnej výučby posielajte na:   \n`lpi-team` :icon[at] `lists.dai.fmph.uniba.sk`.\n\n<details>\n\n::summary[:icon[help] **Tabuľka symbolov** používaných nižšie a ich $\\TeX$ového zápisu.]\n\n:::div{.table.table-sm.overflow-auto.small}\n| Symbol | TeX | Význam | Symbol | TeX | Význam | Symbol | TeX | Význam |\n|:------:|:----|:-------|:------:|:----|:-------|:------:|:----|:-------|\n| ∧ | `\\land` | konjunkcia | $\\Lang$ | `\\Lang` | jazyk | $\\models$ | `\\models` | pravdivosť v štruktúre |\n| ∨ | `\\lor` | disjunkcia | $\\Atoms$ | `\\Atoms` | množina atómov jazyka $\\Lang$ | $\\nmodels$ | `\\nmodels` | nepravdivosť v štruktúre |\n| → | `\\limpl` | implikácia | $\\Consts$ | `\\Consts` | množina konštánt jazyka $\\Lang$ | $\\pmodels$ | `\\pmodels` | pravdivosť v ohodnotení (<em>p</em>ropozičná) |\n| ↔ | `\\lequiv` | ekvivalencia | $\\Preds$ | `\\Preds` | množina predikátov jazyka $\\Lang$ | $\\npmodels$ | `\\npmodels` | nepravdivosť v ohodnotení |\n| ≐ | `\\doteq` | rovnosť (ako logický) symbol | $\\Forms$ | `\\Forms` | množina všetkých formúl jazyka $\\Lang$ | $\\pentails$ | `\\pentails` | výrokovologické (<em>p</em>ropozičné) vyplývanie |\n| ¬ | `\\lnot` | negácia | $\\Struct$ | `\\Struct` | štruktúra | $\\npentails$ | `\\npentails` | výrokovologické nevyplývanie |\n| ∀ | `\\forall` | všeobecný kvantifikátor | $\\sym{Ann}$, $\\asym{2}{likes}$ | `\\sym{Ann}`, `\\asym{2}{likes}` | konkrétny mimolog. symbol | ↦ | `\\mapsto` | zobrazenie (prvku na prvok) |\n| ∃ | `\\exists` | existenčný kvantifikátor | $\\vk$, …, $\\vz$ | `\\vk`, …, `\\vz` | konkrétna indivíduová premenná | $\\Tabl$ | `\\Tabl` | metapremenná ozn. tablo |\n| <b>T</b>, <b>F</b> | `\\sign{T}`, `\\sign{F}` | znamienko označenej formuly | $\\bigl($, $\\bigr)$| `\\bigl(`, `\\bigr)` | väčšie zátvorky | $\\pi$ | `\\pi` | metapremenná ozn. vetvu tabla |\n\n:::\n</details>",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "16": {
+      "id": 16,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"Bob,  Eva , Karen\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"Bob\",\"Eva\",\"Karen\"]},\"predicates\":{\"value\":\"man/1, woman/1, married/2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"man\",\"arity\":1},{\"name\":\"woman\",\"arity\":1},{\"name\":\"married\",\"arity\":2}]},\"functions\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"lockedComponent\":true},\"structure\":{\"constants\":{\"Bob\":{\"value\":\"3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Eva\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"Karen\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]}},\"predicates\":{\"man/1\":{\"value\":\"2\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"2\"]],\"tableEnabled\":false},\"woman/1\":{\"value\":\"1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\"]],\"tableEnabled\":false},\"married/2\":{\"value\":\"(1,1),(1,2),(2,1)\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[[\"1\",\"1\"],[\"1\",\"2\"],[\"2\",\"1\"]],\"tableEnabled\":false}},\"functions\":{},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"1, 2, 3\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[\"1\",\"2\",\"3\"]}},\"expressions\":{\"formulas\":[{\"value\":\"(∃x woman(x)∧∃y man(y))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"man\",\"terms\":[{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":false},{\"value\":\"(∀x man(x)∨∃y man(y))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subLeft\":{\"variableName\":\"x\",\"subFormula\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}},\"subRight\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"man\",\"terms\":[{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(woman(x)→¬man(x))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x(woman(x)∧man(x))\",\"expressionValue\":false,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(woman(x)→man(x))\",\"expressionValue\":false,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x(woman(x)→man(x))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x(married(x,Karen)∧(man(x)∨woman(x)))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Karen\"}]},\"subRight\":{\"subLeft\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x(married(x,Eva)→woman(x))\",\"expressionValue\":false,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Eva\"}]},\"subRight\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x((woman(x)∧¬married(x,Karen))→married(x,Bob))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Karen\"}]}}},\"subRight\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Bob\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"¬∀x((man(x)∧¬married(x,Karen))→married(x,Eva))\",\"expressionValue\":false,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"subFormula\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Karen\"}]}}},\"subRight\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Eva\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∃x((woman(x)∧married(x,Karen))→married(x,Eva))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"subLeft\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Karen\"}]}},\"subRight\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"Eva\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"¬∀x(man(x)∨woman(x))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"x\",\"subFormula\":{\"subLeft\":{\"name\":\"man\",\"terms\":[{\"name\":\"x\"}]},\"subRight\":{\"name\":\"woman\",\"terms\":[{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"¬∃y married(Bob,y)\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"name\":\"married\",\"terms\":[{\"name\":\"Bob\"},{\"name\":\"y\"}]}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true},{\"value\":\"∀x∀y(married(x,y)→married(y,x))\",\"expressionValue\":true,\"answerValue\":\"\",\"errorMessage\":\"\",\"inputLocked\":false,\"answerLocked\":false,\"parsed\":{\"variableName\":\"x\",\"subFormula\":{\"variableName\":\"y\",\"subFormula\":{\"subLeft\":{\"name\":\"married\",\"terms\":[{\"name\":\"x\"},{\"name\":\"y\"}]},\"subRight\":{\"name\":\"married\",\"terms\":[{\"name\":\"y\"},{\"name\":\"x\"}]}}}},\"gameHistory\":[],\"showVariables\":false,\"gameEnabled\":false,\"variableIndex\":1,\"validSyntax\":true}],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "19": {
+      "id": 19,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 17,
+          "title": "2023 – Cvičenie 8.1",
+          "description": "Sformalizujte nasledujúce tvrdenia ako ucelenú teóriu v danom jazyku logiky prvého rádu.",
+          "constants": "Evka, Novy, Theory_of_everything, Introduction_to_abstraction, Adam, Mlada, Course_for_demanding",
+          "predicates": "phd_student/1, supervisor/2, human/1, student/1, teacher/1, teaches/2, full_prof/1, teaching_assistant/2, assistant_prof/1, associate_prof/1, aced/2, passed/2, enrolled_in/2, course/1, popular/1, smart/1, happy/1, likes/2",
+          "functions": "",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 778,
+              "proposition": "1. Evka je doktorandka a má školiteľa.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 779,
+              "proposition": "2. Všetko sú ľudia.",
+              "solution": null
+            },
+            {
+              "proposition_id": 780,
+              "proposition": "3. Všetci doktorandi sú študenti.",
+              "solution": null
+            },
+            {
+              "proposition_id": 781,
+              "proposition": "4. Niektorí doktorandi sú aj učiteľmi.",
+              "solution": null
+            },
+            {
+              "proposition_id": 782,
+              "proposition": "5. Nikto nemôže učiť sám seba.",
+              "solution": null
+            },
+            {
+              "proposition_id": 783,
+              "proposition": "6. Žiaden profesor nemôže byť doktorand.",
+              "solution": null
+            },
+            {
+              "proposition_id": 784,
+              "proposition": "7. Niektorí študenti samozrejme nie sú doktorandi.",
+              "solution": null
+            },
+            {
+              "proposition_id": 785,
+              "proposition": "8. Doktorandi profesora Nového sú cvičiaci buď na Teórii všetkého alebo Úvode do abstrakcie.",
+              "solution": null
+            },
+            {
+              "proposition_id": 786,
+              "proposition": "9. Učitelia okrem asistentov sú profesori a docenti.",
+              "solution": null
+            },
+            {
+              "proposition_id": 787,
+              "proposition": "10. Adamov školiteľ musí byť docent alebo profesor v prípade, že je Adam doktorand.",
+              "solution": null
+            },
+            {
+              "proposition_id": 788,
+              "proposition": "11.  Docentka Mladá školí iba takých študentov, ktorí absolvovali s vyznamenaním Kurz pre náročných, ale nie sú doktorandi.",
+              "solution": null
+            },
+            {
+              "proposition_id": 789,
+              "proposition": "12. Predmet Teória všetkého si nemôžu zapísať tí, čo neabsolvovali ani Kurz pre náročných, ani Úvod do abstrakcie.",
+              "solution": null
+            },
+            {
+              "proposition_id": 790,
+              "proposition": "13. Ak nejaký kurz učí profesor Nový, tak ide o neobľúbený kurz.",
+              "solution": null
+            },
+            {
+              "proposition_id": 791,
+              "proposition": "14. Doktorandi profesora Nového cvičiaci Teóriu všetkého sú veľmi bystrí.",
+              "solution": null
+            },
+            {
+              "proposition_id": 792,
+              "proposition": "15. Ak je nejaký Mladej doktorand bystrý, tak je šťastná.",
+              "solution": null
+            },
+            {
+              "proposition_id": 793,
+              "proposition": "16. Nový je šťastný, iba ak ho obľubuje aspoň jeden študent.",
+              "solution": null
+            }
+          ]
+        },
+        "exerciseId": 17
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "20": {
+      "id": 20,
+      "type": "text",
+      "data": "## Prémiová úloha `tu08-bonus`\n\n:icon[bonus]\nĎalšie skúsenosti a prémiový 1 bod môžete získať vyriešením prémiovej úlohy\n:span[[tu08-bonus](../../tu08-bonus/teoreticke-ain/tu08-bonus.workbook)]{.text-nowrap}.\n\n:icon[deadline]\nTermín na odovzdanie je **streda 19. 4. 2023 o 23:59**.\nOdkaz vyššie smeruje na pracovný hárok prémiovej úlohy v správnej vetve, v ktorom nájdete detaily odovzdania.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    }
+  },
+  "cellsOrder": [
+    1,
+    11,
+    20,
+    2,
+    19,
+    3,
+    16,
+    5,
+    9,
+    8
+  ],
+  "settings": {
+    "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n\n% Tableaux %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\newcommand{\\Tabl}{\\mathcal{T}}\n\n\\newcommand\\sign[1]{\\mathop{\\text{\\textsf{\\textbf{#1}}}}\\nolimits}"
+  }
+}

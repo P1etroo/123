@@ -1,0 +1,260 @@
+{
+  "idCounter": 22,
+  "cells": {
+    "5": {
+      "id": 5,
+      "type": "text",
+      "data": "**b)** :icon[tools] Nájdite model sformalizovanej teórie,\nktorým dokážete, že táto teória je splniteľná,\naj to, že všetky predikáty sú súčasne splniteľné,\nteda ich interpretácie budú v modeli **neprázdne**.\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      },
+      "isEdited": false
+    },
+    "7": {
+      "id": 7,
+      "type": "text",
+      "data": "## Úloha B10.:cnt[a]\n\nZbierka: :xref[7.5.7]{.exbook label=\"príklad\"}.\n\nV logike prvého rádu môžeme sformalizovať (axiomatizovať)\nteóriu množín.\nÚplná formalizácia je pomerne komplikovaná.\nPre naše účely postačí nasledujúci fragment $T_\\mathrm{set}$\nso základnými vzťahmi a operáciami\nv jazyku $\\mathcal{L}_\\mathrm{set}$,\nkde $\\mathcal{C}_{\\mathcal{L}_\\mathrm{set}} = \\{ \\textsf{empty} \\}$,\n$\\mathcal{P}_{\\mathcal{L}_\\mathrm{set}} = \\{ \\textsf{in}^2, \\textsf{subseteq}^2 \\}$\na $\\mathcal{F}_{\\mathcal{L}_\\mathrm{set}} = \\{ \\textsf{union}^2, \\textsf{inter}^2, \\textsf{diff}^2 \\}$:\n\n$$\n\\begin{align*}\n    \\A{\\vx}\\A{\\vy}\n        &(\\,\\A{\\vz}(\\sym{in}(\\vz, \\vx) \\lequiv \\sym{in}(\\vz, \\vy)) \\limpl \\vx \\doteq \\vy\\,)\n        \\tag{extenzionalita}\\\\\n    \\A{\\vx}\\A{\\vy}\n        &(\\,\\sym{subseteq}(\\vx, \\vy) \\lequiv \\A{\\vz}(\\sym{in}(\\vz, \\vx) \\limpl \\sym{in}(\\vz, \\vy))\\,)\n        \\tag{podmnožina}\\\\\n    \\A{\\vz}&\\,\\lnot \\sym{in}(\\vz,\\sym{empty})\n        \\tag{prázdna mn.}\\\\\n    \\A{\\vx}\\A{\\vy}\\A{\\vz}\n        &(\\,\\sym{in}(\\vz,\\sym{inter}(\\vx,\\vy)) \\lequiv (\\sym{in}(\\vz,\\vx) \\land \\sym{in}(\\vz,\\vy))\\,)\n        \\tag{prienik}\\\\\n    \\A{\\vx}\\A{\\vy}\\A{\\vz}\n        &(\\,\\sym{in}(\\vz,\\sym{union}(\\vx,\\vy)) \\lequiv (\\sym{in}(\\vz, \\vx) \\lor \\sym{in}(\\vz,\\vy))\\,)\n        \\tag{zjednotenie}\\\\\n    \\A{\\vx}\\A{\\vy}\\A{\\vz}\n        &(\\,\\sym{in}(\\vz,\\sym{diff}(\\vx,\\vy)) \\lequiv\n            (\\sym{in}(\\vz,\\vx) \\land \\lnot\\sym{in}(\\vz,\\vy))\\,)\n        \\tag{rozdiel}\n\\end{align*}\n$$\n\nPrvorádovými tablami rozšírenými o pravidlá $\\gamma^*$ a $\\delta^*$\na pravidlá z :xref[5.3.1]{.exbook label=\"úlohy\"}. v zbierke dokážte,\nže z $T_\\mathrm{set}$ vyplývajú nasledujúce formuly:\n\n$$\n\n\\begin{align*}\n  X_1 &= \\A{\\vx}\\A{\\vy}(\\,\\sym{diff}(\\vx, \\vy) \\doteq \\sym{empty} \\limpl\n      \\sym{subseteq}(\\vx,\\vy)\\,)\n  \\\\\n  X_2 &= \\A{\\vu}\\A{\\vx}\\A{\\vy}\n      (\\,\\sym{subseteq}(\\sym{union}(\\vx,\\vy),\\vu) \\limpl\n          \\sym{subseteq}(\\vx,\\vu) \\,)\n\\end{align*}\n$$\n\n<div class=\"note bg-transparent p-0\">\n\n:icon[tools]\nVyužite pripravené editory tabiel so sadou pravidiel _Full FOL_,\nsprávne inicializované celou teóriou (budete z nej potrebovať iba časť) a dokazovanými formulami.\n\n:icon[write]\nPre každú z formúl $X_1$ a $X_2$ napíšte zdôvodnený záver\no jej vyplývaní z teórie $T_\\mathrm{set}$.\n</div>\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      },
+      "isEdited": false
+    },
+    "17": {
+      "id": 17,
+      "type": "text",
+      "data": "::::header\n:::hgroup\n::p[Logika pre informatikov]{.h2}\n# 10. teoretické cvičenie<br><span class=\"h2\">Prémiová úloha</span>\n:::\n\n:::div{.dl-inset.dl-indented}\n\n:icon[deadline] Termín odovzdania:\n: utorok 9. 5. 2023 o 23:59\n\n:icon[bonus] Hodnotenie:\n: 1 bod za včas odovzdané správne riešenie\n\n:icon[diagram-2-fill]{.text-primary} Vetva repozitára\n: `tu10-bonus`\n: :span[[Otvoriť túto úlohu v správnej vetve](../../tu10-bonus/teoreticke-ain/tu10-bonus.workbook)]\n\n:icon[save-fill]{.text-success} Uloženie riešenia do vetvy\n: Stlačte :span[Merge changes]{.border.border-success.text-success.p-1.rounded} na hornej lište\n: **Určite uložte posledné zmeny pred odovzdaním!**\n\n:icon[submission] Odovzdanie\n: Vytvorte pull request (PR) **do vetvy `tu10-bonus`** v repozitári `FMFI-UK-1-AIN-412/lpi23-‹váš_uniba_login›`\n: Správne vytvorený PR nájdete v [zozname PR pre tu10-bonus](https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+user%3AFMFI-UK-1-AIN-412+base%3Atu10-bonus)\n\n:icon[envelope-at-fill]{.text-primary} Kontakt na vyučujúcich\n: `lpi-team` :icon[at] `lists.dai.fmph.uniba.sk`.\n\n:::\n::::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "19": {
+      "id": 19,
+      "type": "text",
+      "data": "## Úloha B10.:cnt[a]\n\nZbierka: :xref[7.5.5]{.exbook label=\"úloha\"}.\n\n**a)**\nSformalizujte čo najvernejšie nižšie uvedené tvrdenia o knihomoľoch a knihách ako ucelenú teóriu $T$ v jazyku $\\Lang$ logiky prvého rádu.\n\nZamýšľaný význam predikátových a funkčných symbolov je:\n\n:::div{.table.table-intended-meaning}\n| Predikát            | Význam                 | Predikát       | Význam |\n|---------------------|------------------------|----------------|--------|\n| bookworm($x$)       | $x$ je knihomoľ\\*ka    | modest($x$)    | $x$ je skromný\\*á    |\n| book($x$)           | $x$ je kniha           | satisfied($x$) | $x$ je spokojný\\*á   |\n| read($x$, $y$)      | $x$ prečítal\\*a $y$    | demanding($x$) | $x$ je náročný\\*á    |\n| owns($x$, $y$)      | $x$ vlastní $y$        |snobbish($x$)   | $x$ je snobský\\*á    |\n| buys($x$, $y$, $z$) | $x$ kúpil\\*a $y$ v $z$ | happy($x$)     | $x$ je šťastný\\*á    |\n| knows($x$, $y$)     | $x$ pozná $y$          | store($x$)     | $x$ je obchod        |\n| wants($x$, $y$)     | $x$ chce $y$           | publisher($x$) | $x$ je vydavateľstvo |\n:::\n\n:::div{.table.table-intended-meaning}\n| Funkčný symbol | Význam        | \n|----------------|---------------|\n| published($x$) | kto vydal $x$ |\n| title($x$)     | názov $x$     |\n:::\n\n<div class=\"note bg-transparent p-0\">\n\n:icon[help] Väčšina definícií je **podmienená**,\nteda vzťahuje sa iba na niektoré druhy objektov.\nSformalizujte to podľa návodu z prednášky.\n\n:icon[help] Vzťahy s jednoznačne priradenými objektmi formalizujte **funkčnými symbolmi** tak,\nako sme to robili v [cvičení 10.1](../../tu10/teoreticke-ain/tu10.workbook).\nTým automaticky dostanete existenciu a jednoznačnosť priradených objektov.\nPotom stačí sformalizovať iba ich druh a ďalšie vlastnosti.\nPoužitie predikátov v týchto prípadoch by veľmi skomplikovalo formalizáciu.\n\n</div>\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "28": {
+      "id": 28,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ∀y ( ∀z ( in(z, x) ↔ in(z, y) ) → x ≐ y )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀x ∀y ( subseteq(x, y) ↔ ∀z ( in(z, x) → in(z, y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀z ¬ in(z, empty)",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ∀x ∀y ∀z ( in(z, inter(x, y)) ↔ ( in(z, x) ∧ in(z, y) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ∀x ∀y ∀z ( in(z, union(x, y)) ↔ ( in(z, x) ∨ in(z, y) ) )",
+                  "references": []
+                },
+                "child": {
+                  "type": "assumption",
+                  "node": {
+                    "id": 6,
+                    "value": "T ∀x ∀y ∀z ( in(z, diff(x, y)) ↔ ( in(z, x) ∧ ¬ in(z, y) ) )",
+                    "references": []
+                  },
+                  "child": {
+                    "type": "open",
+                    "node": {
+                      "id": 7,
+                      "value": "F ∀x ∀y ( diff(x, y) ≐ empty → subseteq(x, y) )",
+                      "references": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "29": {
+      "id": 29,
+      "type": "tableauEditor",
+      "data": {
+        "type": "assumption",
+        "node": {
+          "id": 1,
+          "value": "T ∀x ∀y ( ∀z ( in(z, x) ↔ in(z, y) ) → x ≐ y )",
+          "references": []
+        },
+        "child": {
+          "type": "assumption",
+          "node": {
+            "id": 2,
+            "value": "T ∀x ∀y ( subseteq(x, y) ↔ ∀z ( in(z, x) → in(z, y) ) )",
+            "references": []
+          },
+          "child": {
+            "type": "assumption",
+            "node": {
+              "id": 3,
+              "value": "T ∀z ¬ in(z, empty)",
+              "references": []
+            },
+            "child": {
+              "type": "assumption",
+              "node": {
+                "id": 4,
+                "value": "T ∀x ∀y ∀z ( in(z, inter(x, y)) ↔ ( in(z, x) ∧ in(z, y) ) )",
+                "references": []
+              },
+              "child": {
+                "type": "assumption",
+                "node": {
+                  "id": 5,
+                  "value": "T ∀x ∀y ∀z ( in(z, union(x, y)) ↔ ( in(z, x) ∨ in(z, y) ) )",
+                  "references": []
+                },
+                "child": {
+                  "type": "open",
+                  "node": {
+                    "id": 6,
+                    "value": "F ∀u ∀x ∀y ( subseteq(union(x, y), u) → subseteq(x, u) )",
+                    "references": []
+                  }
+                }
+              }
+            }
+          }
+        },
+        "config": "Full FOL"
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "31": {
+      "id": 31,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 25,
+          "title": "2023 – Prémiová úloha 10.1",
+          "description": "Sformalizujte nasledujúce tvrdenia v jazyku prvorádovej logiky s funkčnými symbolmi a s rovnosťou. ",
+          "constants": "",
+          "predicates": "human/1, bookworm/1, book/1, read/2, owns/2, buys/3, knows/2, wants/2, modest/1, satisfied/1, demanding/1, snobbish/1, happy/1, store/1, publisher/1",
+          "functions": "published/1, title/1",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 968,
+              "proposition": "1. Knihomoľ je práve taký človek, ktorý prečítal všetky svoje knihy.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 969,
+              "proposition": "2. Knihomoľ je skromný práve vtedy, keď si nekúpi v jednom obchode viac ako jednu knihu.",
+              "solution": null
+            },
+            {
+              "proposition_id": 970,
+              "proposition": "3. Za náročného definujeme toho knihomoľa, ktorý k spokojnosti vyžaduje, aby mal všetky knihy, ktoré chce.",
+              "solution": null
+            },
+            {
+              "proposition_id": 971,
+              "proposition": "4. Snobský je práve taký knihomoľ, ktorý je spokojný, iba ak si kúpi všetky knihy, ktoré chce.",
+              "solution": null
+            },
+            {
+              "proposition_id": 972,
+              "proposition": "5. Knihomoľ je šťastný práve vtedy, keď nepozná knihu, ktorú by nečítal.",
+              "solution": null
+            },
+            {
+              "proposition_id": 973,
+              "proposition": "6. Každá kniha bola vydaná vo vydavateľstve.",
+              "solution": null
+            },
+            {
+              "proposition_id": 974,
+              "proposition": "7. Knihomoľ nechce dve knihy s rovnakým názvom.",
+              "solution": null
+            },
+            {
+              "proposition_id": 975,
+              "proposition": "8. Ľudia, knihy, obchody a vydavateľstvá sú navzájom disjunktné.",
+              "solution": null
+            }
+          ]
+        },
+        "exerciseId": 25
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "32": {
+      "id": 32,
+      "type": "structureExplorer",
+      "data": "{\"common\":{\"teacherMode\":false},\"language\":{\"constants\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"predicates\":{\"value\":\"human/1, bookworm/1, book/1, read/2, owns/2, buys/3, knows/2, wants/2, modest/1, satisfied/1, demanding/1, snobbish/1, happy/1, store/1, publisher/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"human\",\"arity\":1},{\"name\":\"bookworm\",\"arity\":1},{\"name\":\"book\",\"arity\":1},{\"name\":\"read\",\"arity\":2},{\"name\":\"owns\",\"arity\":2},{\"name\":\"buys\",\"arity\":3},{\"name\":\"knows\",\"arity\":2},{\"name\":\"wants\",\"arity\":2},{\"name\":\"modest\",\"arity\":1},{\"name\":\"satisfied\",\"arity\":1},{\"name\":\"demanding\",\"arity\":1},{\"name\":\"snobbish\",\"arity\":1},{\"name\":\"happy\",\"arity\":1},{\"name\":\"store\",\"arity\":1},{\"name\":\"publisher\",\"arity\":1}]},\"functions\":{\"value\":\"published/1, title/1\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[{\"name\":\"published\",\"arity\":1},{\"name\":\"title\",\"arity\":1}]},\"lockedComponent\":true},\"structure\":{\"constants\":{},\"predicates\":{\"human/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"bookworm/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"book/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"read/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"owns/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"buys/3\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"knows/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"wants/2\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"modest/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"satisfied/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"demanding/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"snobbish/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"happy/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"store/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"publisher/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"functions\":{\"published/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false},\"title/1\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[],\"tableEnabled\":false}},\"variables\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"\",\"parsed\":[]},\"domain\":{\"value\":\"\",\"locked\":false,\"errorMessage\":\"Domain cannot be empty\",\"parsed\":[]}},\"expressions\":{\"formulas\":[],\"terms\":[]},\"diagramCordState\":{}}",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    }
+  },
+  "cellsOrder": [
+    17,
+    19,
+    31,
+    5,
+    32,
+    7,
+    28,
+    29
+  ],
+  "firstCellId": 0,
+  "lastCellId": 14,
+  "editedCellId": 14,
+  "settings": {
+    "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n"
+  }
+}

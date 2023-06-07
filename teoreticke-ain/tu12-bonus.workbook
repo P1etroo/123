@@ -1,0 +1,135 @@
+{
+  "versionNumber": 1,
+  "cells": {
+    "1": {
+      "id": 1,
+      "type": "text",
+      "data": "::::header\n:::hgroup\n::p[Logika pre informatikov]{.h2}\n# 12. teoretické cvičenie<br><span class=\"h2\">Prémiová úloha</span>\n:::\n\n:::div{.dl-inset.dl-indented}\n\n:icon[deadline] Termín odovzdania:\n: utorok 16. 5. 2023 o 23:59\n\n:icon[bonus] Hodnotenie:\n: 1 bod za včas odovzdané správne riešenie\n\n:icon[diagram-2-fill]{.text-primary} Vetva repozitára\n: `tu12-bonus`\n: :span[[Otvoriť túto úlohu v správnej vetve](../../tu12-bonus/teoreticke-ain/tu12-bonus.workbook)]\n\n:icon[save-fill]{.text-success} Uloženie riešenia do vetvy\n: Stlačte :span[Merge changes]{.border.border-success.text-success.p-1.rounded} na hornej lište\n: **Určite uložte posledné zmeny pred odovzdaním!**\n\n:icon[submission] Odovzdanie\n: Vytvorte pull request (PR) **do vetvy `tu12-bonus`** v repozitári `FMFI-UK-1-AIN-412/lpi23-‹váš_uniba_login›`\n: Správne vytvorený PR nájdete v [zozname PR pre tu12-bonus](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+user%3AFMFI-UK-1-AIN-412+base%3Atu12-bonus)\n\n:icon[envelope-at-fill]{.text-primary} Kontakt na vyučujúcich\n: `lpi-team` :icon[at] `lists.dai.fmph.uniba.sk`.\n\n:::\n::::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "2": {
+      "id": 2,
+      "type": "text",
+      "data": "## Úloha B12.:cnt[a]\n\nZbierka: :xref[7.7.12]{.exbook label=\"úloha\"}.\n\n**a)** :icon[tools] Pomocou aplikácie Formalization checker sformalizujte tvrdenia 1–6 ako teóriu $T=\\{B_1,\\dots,B_6\\}$ v uvedenom jazyku logiky prvého rádu. Ďalej sformalizujte tvrdenie X ako formulu $X$, ktorú použijete v časti b).\n\nZamýšľaný význam predikátových symbolov je:\n\n:::div{.table.table-intended-meaning.small}\n| Predikát             | Význam              |   | Predikát       | Význam |\n|----------------------|---------------------|-|----------------|--------|\n| Harley($x$)          | $x$ je Harley       || yuppie($x$)    | $x$ je karierista\\*ka |\n| rides($x$,$y$)       | $x$ jazdí na $y$    || lawyer($x$)    | $x$ je právnik\\*čka |\n| rough_character($x$) | $x$ je drsniak\\*čka  || girl($x$)      | $x$ je dievča       |\n| biker($x$)           | $x$ je motorkár\\*ka || nice($x$)      | $x$ je dobrý\\*á\\*é  |\n| BMW($x$)             | $x$ je BMW          || dates($x$,$y$) | $x$ randí s $y$          |\n:::\n\n:::aside{.note.bg-transparent.p-0}\n:icon[emoji-wink-fill]{.text-info}\nNeberte stereotypnosť tvrdení v tejto úlohe ako príliš vážne.\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "3": {
+      "id": 3,
+      "type": "text",
+      "data": "**c)** :icon[write]\nUpravte teóriu potrebnú na vyriešenie formálneho problému rezolvenciou\nna ekvisplniteľnú klauzálnu teóriu.\n\n…",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "4": {
+      "id": 4,
+      "type": "text",
+      "data": "**b)** _Je na základe tvrdení 1–6 pravda, že ak John nie je právnik, tak s ním Mary nerandí?_\n\n:icon[write]\nPre uvedenú otázku sformulujte príslušný logický problém\ntýkajúci sa teórie $T$ a formuly $X$.\n\n…\n\n:icon[write]\nAko tento problém vyriešite pomocou rezolvencie?\n\n…\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "6": {
+      "id": 6,
+      "type": "text",
+      "data": "**d)** :icon[tools]\nVyriešte uvedený logický problém z časti b) pomocou rezolvencie\npre logiku prvého rádu v aplikácii Resolution editor.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "8": {
+      "id": 8,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 28,
+          "title": "2023 – Prémiová úloha 12.1",
+          "description": "",
+          "constants": "Mary, John",
+          "predicates": "Harley/1, rides/2, rough_character/1, biker/1, BMW/1, yuppie/1, lawyer/1, girl/1, nice/1, dates/2",
+          "functions": "",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 1002,
+              "proposition": "1. Každý, kto jazdí na nejakom Harleyi, je drsniak.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 1003,
+              "proposition": "2. Všetci motorkári jazdia na niečom, čo je buď Harley alebo BMW.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 1004,
+              "proposition": "3. Každý, kto jazdí na nejakom BMW, je karierista.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 1005,
+              "proposition": "4. Každý karierista je právnik.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 1006,
+              "proposition": "5. Dobré dievčatá nerandia s drsniakmi.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 1007,
+              "proposition": "6. Mary je dobré dievča a John je motorkár.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 1008,
+              "proposition": "X. Ak John nie je právnik, tak s ním Mary nerandí.",
+              "solution": ""
+            }
+          ]
+        },
+        "exerciseId": 28
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "9": {
+      "id": 9,
+      "type": "text",
+      "data": "**e)** :icon[write]\nK akému záveru ste dospeli rezolvenciou?\nAké je riešenie formálneho problému, ktorý ste určili v časti b)? \nAká je odpoveď na neformálnu otázku z časti b)?",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    }
+  },
+  "cellsOrder": [
+    1,
+    2,
+    8,
+    4,
+    3,
+    6,
+    9
+  ],
+  "settings": {
+    "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n\\newcommand{\\Tabl}{\\mathcal{T}}\n\n\\newcommand\\sign[1]{\\mathop{\\text{\\textsf{\\textbf{#1}}}}\\nolimits}"
+  }
+}

@@ -1,0 +1,25 @@
+name: Student tests
+on:
+  pull_request:
+    branches:
+      - 'pu**'
+      - 'bonus**'
+      - 'sat'
+jobs:
+  Tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TRAVIS_BRANCH: ${{github.base_ref}}
+      TRAVIS_COMMIT_RANGE: HEAD^..HEAD
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 3
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Tests
+        run: test/travis.sh

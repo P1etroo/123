@@ -1,0 +1,262 @@
+{
+  "versionNumber": 1,
+  "cells": {
+    "1": {
+      "id": 1,
+      "type": "text",
+      "data": "::::header\n:::hgroup\n::p[Logika pre informatikov]{.h2}\n# 10. teoretické cvičenie\n:::\n\n:::div{.dl-inset.dl-indented}\n:icon[deadline] Termín odovzdania\n:   nedeľa 30. 4. 2023 o 23:59\n\n:icon[bonus] Hodnotenie\n:   0,5 boda za včas odovzdané úplne vypracované cvičenie bez vážnych chýb\n\n:icon[diagram-2-fill]{.text-primary} Vetva repozitára\n: `tu10`\n: :span[[Otvoriť toto cvičenie v správnej vetve](../../tu10/teoreticke-ain/tu10.workbook)]\n\n:icon[save-fill]{.text-success} Uloženie riešenia do vetvy\n: Stlačte :span[Merge changes]{.border.border-success.text-success.p-1.rounded} na hornej lište\n: **Určite uložte posledné zmeny pred odovzdaním!**\n\n:icon[submission] Odovzdanie\n: Vytvorte pull request (PR) **do vetvy `tu10`** v repozitári `FMFI-UK-1-AIN-412/lpi23-‹váš_uniba_login›`\n: Správne vytvorený PR nájdete v [zozname PR pre tu10](https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+user%3AFMFI-UK-1-AIN-412+base%3Atu10)\n\n:icon[envelope-at-fill]{.text-primary} Kontakt na vyučujúcich\n: `lpi-team` :icon[at] `lists.dai.fmph.uniba.sk`.\n\n:::\n\n::::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "3": {
+      "id": 3,
+      "type": "text",
+      "data": "## Cvičenie 10.:cnt[a]\n\nZbierka: :xref[7.1.1]{.exbook label=\"úloha\"}.\n\n**a)** :icon[tools] Pomocou aplikácie formalization checker sformalizujte nižšie uvedené tvrdenia v jazyku prvorádovej logiky\ns funkčnými symbolmi a s rovnosťou.\n\nZamýšľanou doménou sú ľudia.\n\nZamýšľaný význam predikátových a funkčných symbolov je:\n\n::::div{.columns.columns-md-2.columns-gap-2}\n:::div{.table.table-intended-meaning.small}\n| Predikátový symbol | Zamýšľaný význam        |\n|--------------------|-------------------------|\n| woman($x$)         | $x$ je žena             |\n| man($x$)           | $x$ je muž              |\n| parent($x$, $y$)   | $x$ je rodičom $y$-a    |\n| sibling($x$, $y$)  | $x$ je súrodencom $y$-a |\n| older($x$, $y$)    | $x$ je starší než $y$   |\n:::\n\n:::div{.table.table-intended-meaning.small}\n| Funkčný symbol         | Zamýšľaný význam               |\n|------------------------|--------------------------------|\n| mother($x$)            | matka $x$-a                    |\n| father($x$)            | otec $x$-a                     |\n| highest_sibling($x$)   | $x$-ov najvyšší súrodenec      |\n| oldest_child($x$, $y$) | najstaršie dieťa páru $x$ a $y$ |\n:::\n::::\n\n:::div{.note.bg-transparent.p-0}\n:icon[info]\nV maximálnej miere využite funkčné symboly na vyjadrenie vzťahov\nso vždy existujúcim a jednoznačným predmetom.\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "5": {
+      "id": 5,
+      "type": "text",
+      "data": "::h3[:icon[house-fill]{.text-primary} Domáca časť]{.h4}\n\n:icon[tools] Pomocou aplikácie Structure explorer\nnájdite model sformalizovanej teórie,\nktorým dokážete, že táto teória je splniteľná,\naj to, že všetky predikáty sú súčasne splniteľné,\nteda ich interpretácie budú v modeli **neprázdne**.\n\n:::div{.note.bg-transparent.p-0}\n:icon[warning]\nVáš model pravdepodobne nebude „prirodzený“.\nVo vlastnom záujme nepoužite priveľa prvkov,\nale dodržte podmienku neprázdnosti interpretácií všetkých predikátov.\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "7": {
+      "id": 7,
+      "type": "text",
+      "data": "## Cvičenie 10.:cnt[a]\n\nZbierka: :xref[7.4.1]{.exbook label=\"úloha\"}.\n\nPomocou tabla pre logiku prvého rádu dokážte:\n\n$$\n\\{ \\vx \\doteq \\vy,\n    \\sym{parent}(\\sym{mother}(\\vv),\\vx),\n    \\lnot\\sym{parent}(\\sym{mother}(\\vw),\\vy) \\}\n    \\entails \\vw \\not\\doteq \\vv\n$$\n\n:::div{.note.bg-transparent.p-0}\n:icon[technical]\nV editore tabiel vyberte sadu pravidiel _Propositional with equality_.\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "9": {
+      "id": 9,
+      "type": "text",
+      "data": "## Cvičenie 10.:cnt[a]\n\nZbierka: :xref[7.4.2]{.exbook label=\"príklad\"}.\n\n:icon[tools] Nasledujúci úsudok môže pôsobiť prekvapujúco.\nSformalizujte ho pomocou aplikácie Formalization checker a následne dokážte jeho správnosť prvorádovým tablom.\n\n:::blockquote{.ms-5}\nKaždý sa bojí Drakulu.    \nDrakula sa bojí iba mňa.\n\nTakže som Drakula\n:::\n\n:::div{.note.bg-transparent.p-0}\n\n:icon[explanation] Použite jazyk logiky prvého rádu $\\Lang$,\nkde $\\Consts = \\{ \\sym{Dracula}, \\sym{me} \\}$,\n$\\Funcs = \\emptyset$ a $\\Preds=\\{\\sym{fears}^2\\}$, pričom zamýšľaný význam predikátu $\\sym{fears}(x,y)$ je $x$ sa bojí $y$-a.\n\nSnažte sa o čo najkratší dôkaz\ns využitím korektných pravidiel ako MP, MT,\nale tiež pravidiel pre ekvivalenciu a kvantifikátory.\n\n:icon[technical]\nV editore tabiel vyberte sadu pravidiel _Basic FOL_.\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "14": {
+      "id": 14,
+      "type": "text",
+      "data": "### Cvičenie 10.:cnt[a]\n\nZbierka: :xref[7.4.6]{.exbook label=\"úloha\"}.\n\nSú nasledujúce tvrdenia pravdivé alebo nepravdivé? Skúste porozmýšľať aj nad tým, ako by ste pravdivé tvrdenia dokázali, resp. ako by ste k nepravdivým skonštruovali protipríklad.\n\n**a)** Existuje formula _s rovnosťou_, ktorá je splnená iba v štruktúre, ktorá má:\n\n:::enum{.i}\n\n1. najviac dvojprvkovú doménu;\n2. aspoň dvojprvkovú doménu.\n\n:::\n\n**b)** Existuje formula _bez rovnosti_, ktorá je splnená iba v štruktúre, ktorá má:\n\n:::enum{.i}\n\n1. aspoň dvojprvkovú doménu;\n2. najviac dvojprvkovú doménu.\n\n:::",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "16": {
+      "id": 16,
+      "type": "text",
+      "data": "### Cvičenie 10.:cnt[a]\n\nZbierka: :xref[7.6.2]{.exbook label=\"úloha\"}.\n\nZadefinujte syntax logiky prvého rádu s funkčnými symbolmi\na s kvantifikátorom ${\\leqslant}1$ („pre najviac jedno“,\nt.j. ${\\leqslant}1 x\\,A$ je splnená, keď $A$ je splnená\npre najviac jeden objekt $x$) namiesto klasických kvantifikátorov\n– teda jazyk a pojmy ako _term_, _formula_.\n\nZadefinujte pojmy _hodnota termu v štruktúre pri ohodnotení_ a _štruktúra spĺňa formulu pri ohodnotení_ pre formuly v tejto syntaxi.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "18": {
+      "id": 18,
+      "type": "text",
+      "data": "## Cvičenie 10.:cnt[a]\n\nZbierka: :xref[7.4.8]{.exbook label=\"úloha\"}.\n\nV logike prvého rádu sformalizujte:\n\n_Nech $f \\colon P \\to Q$ a $g \\colon Q \\to R$\nsú surjektívne funkcie.\nPotom aj ich zloženie $(f \\circ g)$ je surjektívna funkcia._\n\nNásledne svoju formalizáciu dokážte tablom\nalebo vyvráťte nájdením štruktúry, ktorá je kontrapríkladom.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "21": {
+      "id": 21,
+      "type": "text",
+      "data": ":icon[write]\nV jazyku $\\Lang$ s $\\Consts = \\emptyset$,\n$\\Preds = \\{ \\asym{1}{P}, \\asym{1}{Q}, \\asym{1}{R} \\}$\na $\\Funcs = \\{ \\asym{1}{f}, \\asym{2}{g} \\}$\nsformalizujte:\n\n* $f$ je surjektívna funkcia z $P$ na $Q$\n  (t.j., pre každý prvok oboru hodnôt $Q$ platí,\n  že $f$ naň zobrazí nejaký prvok svojho definičného    oboru $P$).\n\n  $S_f = …$\n\n* $g$ je surjektívna funkcia z $Q$ na $R$.\n\n  $S_g = …$\n\n* Zložená funkcia $f \\circ g$ je surjektívna funkcia z $P$ na $R$.\n\n  $S_{f \\circ g} = …$\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "22": {
+      "id": 22,
+      "type": "text",
+      "data": ":icon[write]\n**Záver:**\n\n::p[Vyplýva $S_{f\\circ g}$ z $\\{S_f, S_g\\}$? Prečo?]{.mb-2}\n:::aside{.note.p-0.bg-transparent}\nVysvetlite: Pre akú množinu označených formúl ste skonštruovali tablo a akú má tablo vlastnosť,\nresp. aký vzťah má štruktúra k $\\{S_f, S_g\\}$ a $S_{f\\circ g}$?\nAko to súvisí s vyplývaním?\n:::\n\n…\n\nPlatí tvrdenie zo zadania tohto cvičenia?\n\n…",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "25": {
+      "id": 25,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 26,
+          "title": "2023 – Cvičenie 10.3",
+          "description": "Sformalizujte nasledujúce tvrdenia v uvedenom jazyku logiky prvého rádu.",
+          "constants": "Dracula, me",
+          "predicates": "fears/2",
+          "functions": "",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 915,
+              "proposition": "1. Každý sa bojí Drakulu.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 916,
+              "proposition": "2. Drakula sa bojí iba mňa.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 917,
+              "proposition": "3. Takže som Drakula",
+              "solution": ""
+            }
+          ]
+        },
+        "exerciseId": 26
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "28": {
+      "id": 28,
+      "type": "text",
+      "data": "## Prémiová úloha `tu10-bonus`\n\n:icon[bonus]\nĎalšie skúsenosti a 1 bod môžete získať vyriešením prémiovej úlohy k tomuto a nasledujúcemu cvičeniu.\n\n:::div{.dl-indented.dl-inset}\n:icon[file-earmark-ruled-fill]{.text-primary} Pracovný hárok prémiovej úlohy\n: :span[[tu10-bonus](../../tu10-bonus/teoreticke-ain/tu10-bonus.workbook)]{.text-nowrap}\n\n:icon[deadline] Termín odovzdania\n: utorok 9. 5. 2023 o 23:59\n",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "29": {
+      "id": 29,
+      "type": "text",
+      "data": ":icon[explanation]\nMnožiny $P$, $Q$, $R$ môžeme v logike prvého rádu\nsformalizovať unárnymi predikátmi.\nNamiesto $x \\in Y$ budeme písať $Y(x)$.\n\nFunkcie môžeme sformalizovať funkčnými symbolmi\n$f$ a $g$.\n\nPri takejto formalizácii operáciu zloženia $\\circ$ v logike prvého rádu priamo sformalizovať nevieme.\nVlastnosti zloženia konkrétnych funkcií však ľahko vyjadríme tak,\nže namiesto $(f \\circ g)(x)$ v nich budeme písať $g(f(x))$.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "30": {
+      "id": 30,
+      "type": "text",
+      "data": ":icon[tools]\nDokážte (v editore tabiel s pravidlami _Basic FOL_)\nalebo vyvráťte (v aplikácii Structure explorer), že $\\{S_f, S_g\\} \\entails S_{f\\circ g}$.",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "31": {
+      "id": 31,
+      "type": "text",
+      "data": "## :icon[homework] Odporúčaná domáca časť<br>(príprava na skúšku)",
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    },
+    "33": {
+      "id": 33,
+      "type": "formalizationChecker",
+      "data": {
+        "exercise": {
+          "exercise_id": 24,
+          "title": "2023 – Cvičenie 10.1",
+          "description": "Sformalizujte nasledujúce tvrdenia v jazyku prvorádovej logiky s funkčnými symbolmi a s rovnosťou. ",
+          "constants": "",
+          "predicates": "woman/1, man/1, parent/2, sibling/2, older/2",
+          "functions": "mother/1, father/1, highest_sibling/1, oldest_child/2",
+          "constraints": "",
+          "propositions": [
+            {
+              "proposition_id": 953,
+              "proposition": "1. Každého matka je žena a otec je muž.",
+              "solution": ""
+            },
+            {
+              "proposition_id": 954,
+              "proposition": "2. Každý má práve dvoch rodičov, svoju matku a svojho otca.",
+              "solution": null
+            },
+            {
+              "proposition_id": 955,
+              "proposition": "3. Súrodenec je niekto a len niekto, s kým máte spoločného rodiča, ale nie ste to vy.",
+              "solution": null
+            },
+            {
+              "proposition_id": 956,
+              "proposition": "4. Každý, kto má súrodenca, má aj najvyššieho súrodenca.",
+              "solution": null
+            },
+            {
+              "proposition_id": 957,
+              "proposition": "5. Každý rodičovský pár má najstaršie dieťa.",
+              "solution": null
+            },
+            {
+              "proposition_id": 958,
+              "proposition": "6. Najstaršie dieťa rodičovského páru je staršie ako všetky ostatné deti tohto páru.",
+              "solution": null
+            },
+            {
+              "proposition_id": 959,
+              "proposition": "7. Kto je jedináčik, je najstarším dieťaťom svojich dvoch rodičov.",
+              "solution": null
+            }
+          ]
+        },
+        "exerciseId": 24
+      },
+      "idCounter": 0,
+      "comments": {
+        "ids": [],
+        "entities": {}
+      }
+    }
+  },
+  "cellsOrder": [
+    1,
+    28,
+    3,
+    33,
+    5,
+    7,
+    9,
+    25,
+    18,
+    29,
+    21,
+    30,
+    22,
+    31,
+    14,
+    16
+  ],
+  "settings": {
+    "katexMacros": "\\newcommand{\\DeclareMathOperator}[2]{\\newcommand{#1}{\\mathop{\\mathrm{#2}}}}\n\n%% General math\n\n% Domain and range\n\\DeclareMathOperator{\\dom}{dom}\n\\DeclareMathOperator{\\rng}{rng}\n\n% Powerset\n\\newcommand\\powerset[1]{\\mathcal{P}(#1)}\n\n% Cardinality\n\\newcommand{\\card}[1]{\\lvert#1\\rvert}\n\n% Numbers\n\\newcommand{\\Nat}{\\mathbb{N}}\n\n% Operations\n\\newcommand{\\TIMES}{\\cdot}\n\n\n% Meta syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\DeclareMathOperator{\\arity}{ar}\n\\newcommand{\\Lang}{\\mathcal{L}}\n\\newcommand{\\Vars}{\\mathcal{V}_{\\Lang}}\n\\newcommand{\\Consts}{\\mathcal{C}_{\\Lang}}\n\\newcommand{\\Preds}{\\mathcal{P}_{\\Lang}}\n\\newcommand{\\Funcs}{\\mathcal{F}_{\\Lang}}\n\\newcommand{\\Terms}{\\mathcal{T}_{\\Lang}}\n\\newcommand{\\Atoms}{\\mathcal{A}_{\\Lang}}\n\\newcommand{\\Forms}{\\mathcal{E}_{\\Lang}}\n\\newcommand{\\PAtoms}{\\mathcal{PA}_{\\Lang}}\n\\newcommand{\\PForms}{\\mathcal{PE}_{\\Lang}}\n\n% Equality axioms\n\\newcommand{\\Eq}{\\mathrm{Eq}}\n\n% Syntactic transformation\n\\newcommand{\\transform}{\\rightsquigarrow}\n\n% Various syntactic functions\n\\DeclareMathOperator{\\vars}{vars}\n\\DeclareMathOperator{\\atoms}{atoms}\n\\DeclareMathOperator{\\acnt}{acnt}\n\\DeclareMathOperator{\\termVars}{termVars}\n\\DeclareMathOperator{\\free}{free}\n\\DeclareMathOperator{\\ground}{ground}\n\\DeclareMathOperator{\\mgu}{mgu}\n\\DeclareMathOperator{\\vcount}{vcount}\n\\DeclareMathOperator{\\acount}{acount}\n\\DeclareMathOperator{\\ccount}{ccount}\n\\DeclareMathOperator{\\pcount}{pcount}\n\\DeclareMathOperator{\\ncount}{ncount}\n\\DeclareMathOperator{\\cjcount}{cjcount}\n\\DeclareMathOperator{\\bccount}{bccount}\n\\DeclareMathOperator{\\lpcount}{lpcount}\n\\DeclareMathOperator{\\rpcount}{rpcount}\n\\DeclareMathOperator{\\subfs}{subfs}\n\\DeclareMathOperator{\\cons}{cons}\n\\DeclareMathOperator{\\nnf}{nnf}\n\n\n% Concrete syntax %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% Connectives\n\n\\newcommand{\\nrarr}{\\nrightarrow}\n\\newcommand{\\limpl}{\\rarr}\n\\newcommand{\\nlimpl}{\\nrarr}\n\\newcommand{\\lequiv}{\\lrarr}\n\\newcommand{\\bigland}{\\bigwedge}\n\\newcommand{\\biglor}{\\bigvee}\n\\newcommand{\\lnand}{\\mathbin{\\uparrow}}\n\\newcommand{\\lnor}{\\mathbin{\\downarrow}}\n\\newcommand{\\lxor}{\\veebar}\n\\newcommand{\\landnot}{\\nrightarrow}\n\\newcommand{\\emptyclause}{\\Box}\n\\newcommand{\\quant}[2]{\\mathop{#1#2}\\nolimits}\n\\newcommand{\\A}{\\quant\\forall}\n\\newcommand{\\E}{\\quant\\exists}\n\n% Symbols\n\\newcommand{\\sym}[1]{\\text{\\textsf{#1}}}\n\\newcommand{\\asym}[2]{\\text{\\textsf{#2}$^#1$}}\n\\newcommand{\\var}[1]{\\text{\\textsf{\\textit{#1}}}}\n\\newcommand\\vk{\\var{k}}\n\\newcommand\\vl{\\var{l}}\n\\newcommand\\vm{\\var{m}}\n\\newcommand\\vn{\\var{n}}\n\\newcommand\\vo{\\var{o}}\n\\newcommand\\vp{\\var{p}}\n\\newcommand\\vq{\\var{q}}\n\\newcommand\\vr{\\var{r}}\n\\newcommand\\vs{\\var{s}}\n\\newcommand\\vt{\\var{t}}\n\\newcommand\\vu{\\var{u}}\n\\newcommand\\vv{\\var{v}}\n\\newcommand\\vw{\\var{w}}\n\\newcommand\\vx{\\var{x}}\n\\newcommand\\vy{\\var{y}}\n\\newcommand\\vz{\\var{z}}\n\n\n% Semantics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% General\n\\providecommand{\\nmodels}\n    {\\mathrel{\\mkern1.5mu{\\not}\\mkern-1.5mu}\\models}\n\\providecommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\renewcommand{\\Equiv}{\\mathrel{\\Leftrightarrow}}\n\\newcommand{\\entails}{\\vDash}\n\\newcommand{\\nentails}{\\nvDash}\n\n% Propositional\n\\newcommand{\\pmodels}{\\models_{\\mathrm{p}}}\n\\newcommand{\\npmodels}{\\nmodels_{\\mathrm{p}}}\n\\newcommand{\\pEquiv}{\\Equiv_{\\mathrm{p}}}\n\\newcommand{\\pentails}{\\entails_{\\mathrm{p}}}\n\\newcommand{\\npentails}{\\nentails_{\\mathrm{p}}}\n\n% First-order\n\\newcommand{\\Struct}{\\mathcal{M}}\n\\newcommand{\\InStruct}{^{\\mathcal{M}}}\n\n\\newcommand{\\Tabl}{\\mathcal{T}}\n\n\\newcommand\\sign[1]{\\mathop{\\text{\\textsf{\\textbf{#1}}}}\\nolimits}"
+  }
+}
