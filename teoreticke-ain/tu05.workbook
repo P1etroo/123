@@ -163,8 +163,10 @@
                   "type": "open",
                   "node": {
                     "id": 6,
-                    "value": "T ¬weekend(day)",
-                    "references": []
+                    "value": "F ¬weekend(day)",
+                    "references": [
+                      "1"
+                    ]
                   }
                 }
               }
