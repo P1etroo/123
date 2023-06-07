@@ -181,8 +181,10 @@
                       "type": "open",
                       "node": {
                         "id": 8,
-                        "value": "T",
-                        "references": []
+                        "value": "T wet(road,day)",
+                        "references": [
+                          "5"
+                        ]
                       }
                     }
                   }
