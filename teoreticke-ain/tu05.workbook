@@ -261,14 +261,18 @@
                                 }
                               },
                               "rightChild": {
-                                "type": "open",
+                                "type": "closed",
                                 "node": {
                                   "id": 16,
                                   "value": "T passed(cleaning_car,road,day)",
                                   "references": [
                                     "14"
                                   ]
-                                }
+                                },
+                                "closed": [
+                                  "16",
+                                  "12"
+                                ]
                               }
                             }
                           }
