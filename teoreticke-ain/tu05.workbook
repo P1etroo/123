@@ -223,7 +223,9 @@
                             "node": {
                               "id": 12,
                               "value": "F passed(cleaning_car,road,day)",
-                              "references": []
+                              "references": [
+                                "11"
+                              ]
                             }
                           }
                         }
