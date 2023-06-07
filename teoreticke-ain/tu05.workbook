@@ -144,11 +144,19 @@
               "references": []
             },
             "child": {
-              "type": "open",
+              "type": "alpha",
               "node": {
                 "id": 4,
                 "value": "T (weekend(day)→¬passed(cleaning_car,road,day))",
                 "references": []
+              },
+              "child": {
+                "type": "open",
+                "node": {
+                  "id": 5,
+                  "value": "",
+                  "references": []
+                }
               }
             }
           }
