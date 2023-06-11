@@ -123,16 +123,24 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "assumption",
+        "type": "beta",
         "node": {
           "id": 1,
           "value": "T (((B ∨ C) ∧ A) → (A ∧ C))",
           "references": []
         },
-        "child": {
+        "leftChild": {
           "type": "open",
           "node": {
             "id": 2,
+            "value": "F ",
+            "references": []
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 3,
             "value": "",
             "references": []
           }
