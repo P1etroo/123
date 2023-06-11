@@ -148,18 +148,30 @@
               ]
             },
             "child": {
-              "type": "open",
+              "type": "alpha",
               "node": {
                 "id": 4,
                 "value": "F B",
-                "references": []
+                "references": [
+                  "3"
+                ]
+              },
+              "child": {
+                "type": "open",
+                "node": {
+                  "id": 5,
+                  "value": "F C",
+                  "references": [
+                    "3"
+                  ]
+                }
               }
             }
           },
           "rightChild": {
             "type": "open",
             "node": {
-              "id": 5,
+              "id": 6,
               "value": "F A",
               "references": [
                 "2"
@@ -170,7 +182,7 @@
         "rightChild": {
           "type": "open",
           "node": {
-            "id": 6,
+            "id": 7,
             "value": "T  (A ∧ C)",
             "references": [
               "1"
