@@ -123,99 +123,11 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "alpha",
+        "type": "open",
         "node": {
           "id": 1,
-          "value": "F ( ( ( B ∨ C ) ∧ A ) → ( A ∧ C ) )",
+          "value": "F (∀x∀y (P (x, y) → Q (f (x) , y))] → [∀z (P (a, z) → Q (f (a) , z)))))))))",
           "references": []
-        },
-        "child": {
-          "type": "alpha",
-          "node": {
-            "id": 2,
-            "value": "T ( ( B ∨ C ) ∧ A )",
-            "references": [
-              "1"
-            ]
-          },
-          "child": {
-            "type": "alpha",
-            "node": {
-              "id": 3,
-              "value": "F ( A ∧ C )",
-              "references": [
-                "1"
-              ]
-            },
-            "child": {
-              "type": "alpha",
-              "node": {
-                "id": 4,
-                "value": "T ( B ∨ C )",
-                "references": [
-                  "2"
-                ]
-              },
-              "child": {
-                "type": "beta",
-                "node": {
-                  "id": 5,
-                  "value": "T A",
-                  "references": [
-                    "2"
-                  ]
-                },
-                "leftChild": {
-                  "type": "closed",
-                  "node": {
-                    "id": 6,
-                    "value": "F A",
-                    "references": [
-                      "3"
-                    ]
-                  },
-                  "closed": [
-                    "6",
-                    "5"
-                  ]
-                },
-                "rightChild": {
-                  "type": "beta",
-                  "node": {
-                    "id": 7,
-                    "value": "F C",
-                    "references": [
-                      "3"
-                    ]
-                  },
-                  "leftChild": {
-                    "type": "openComplete",
-                    "node": {
-                      "id": 8,
-                      "value": "T B",
-                      "references": [
-                        "4"
-                      ]
-                    }
-                  },
-                  "rightChild": {
-                    "type": "closed",
-                    "node": {
-                      "id": 9,
-                      "value": "T C",
-                      "references": [
-                        "4"
-                      ]
-                    },
-                    "closed": [
-                      "9",
-                      "7"
-                    ]
-                  }
-                }
-              }
-            }
-          }
         },
         "config": "Full FOL"
       },
