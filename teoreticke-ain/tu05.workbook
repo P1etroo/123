@@ -193,16 +193,24 @@
                     "node": {
                       "id": 8,
                       "value": "T B",
-                      "references": []
+                      "references": [
+                        "4"
+                      ]
                     }
                   },
                   "rightChild": {
-                    "type": "open",
+                    "type": "closed",
                     "node": {
                       "id": 9,
-                      "value": "T ",
-                      "references": []
-                    }
+                      "value": "T C",
+                      "references": [
+                        "4"
+                      ]
+                    },
+                    "closed": [
+                      "9",
+                      "7"
+                    ]
                   }
                 }
               }
