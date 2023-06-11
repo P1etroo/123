@@ -189,7 +189,7 @@
                     ]
                   },
                   "leftChild": {
-                    "type": "open",
+                    "type": "openComplete",
                     "node": {
                       "id": 8,
                       "value": "T B",
