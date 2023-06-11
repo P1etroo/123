@@ -152,11 +152,13 @@
               "node": {
                 "id": 4,
                 "value": "T  (P(i, j) → Q(f(i) , j))",
-                "references": []
+                "references": [
+                  "2"
+                ]
               }
             },
             "substitution": {
-              "str": ""
+              "str": "x->i, y->j"
             }
           }
         },
