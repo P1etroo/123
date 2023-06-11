@@ -151,14 +151,14 @@
               "type": "open",
               "node": {
                 "id": 4,
-                "value": "T  (P(i, j) → Q(f(i) , j))",
+                "value": "T  (∀y(P(i, y) → Q(f(i) ,y)))",
                 "references": [
                   "2"
                 ]
               }
             },
             "substitution": {
-              "str": "x->i, y->j"
+              "str": "x->i"
             }
           }
         },
