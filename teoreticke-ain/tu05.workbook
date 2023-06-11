@@ -123,74 +123,11 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "alpha",
+        "type": "open",
         "node": {
           "id": 1,
-          "value": "F ( ∀x ∀y ( P(x, y) → Q(f(x), y) ) → ∀z ( P(a, z) → Q(f(a), z) ) )",
+          "value": "T (((B ∨ C) ∧ A) → (A ∧ C))",
           "references": []
-        },
-        "child": {
-          "type": "alpha",
-          "node": {
-            "id": 2,
-            "value": "T ∀x ∀y ( P(x, y) → Q(f(x), y) )",
-            "references": [
-              "1"
-            ]
-          },
-          "child": {
-            "type": "gamma",
-            "node": {
-              "id": 3,
-              "value": "F ∀z ( P(a, z) → Q(f(a), z) )",
-              "references": [
-                "1"
-              ]
-            },
-            "child": {
-              "type": "delta",
-              "node": {
-                "id": 4,
-                "value": "T ∀y ( P(a, y) → Q(f(a), y) )",
-                "references": [
-                  "2"
-                ]
-              },
-              "child": {
-                "type": "gamma",
-                "node": {
-                  "id": 5,
-                  "value": "F ( P(a, j) → Q(f(a), j) )",
-                  "references": [
-                    "3"
-                  ]
-                },
-                "child": {
-                  "type": "closed",
-                  "node": {
-                    "id": 6,
-                    "value": "T ( P(a, j) → Q(f(a), j) )",
-                    "references": [
-                      "4"
-                    ]
-                  },
-                  "closed": [
-                    "6",
-                    "5"
-                  ]
-                },
-                "substitution": {
-                  "str": "y->j"
-                }
-              },
-              "substitution": {
-                "str": "z->j"
-              }
-            },
-            "substitution": {
-              "str": "x->a"
-            }
-          }
         },
         "config": "Full FOL"
       },
