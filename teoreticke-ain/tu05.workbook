@@ -160,8 +160,10 @@
                 "type": "gamma",
                 "node": {
                   "id": 5,
-                  "value": "",
-                  "references": []
+                  "value": "F ( P(a, j) → Q(f(a), j) )",
+                  "references": [
+                    "3"
+                  ]
                 },
                 "child": {
                   "type": "open",
@@ -178,7 +180,7 @@
                 }
               },
               "substitution": {
-                "str": ""
+                "str": "z->j"
               }
             },
             "substitution": {
