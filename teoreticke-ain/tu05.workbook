@@ -139,13 +139,24 @@
             ]
           },
           "child": {
-            "type": "open",
+            "type": "gamma",
             "node": {
               "id": 3,
               "value": "F (∀z (P(a, z) → Q (f(a) , z)))",
               "references": [
                 "1"
               ]
+            },
+            "child": {
+              "type": "open",
+              "node": {
+                "id": 4,
+                "value": "T  (P(i, j) → Q(f(i) , j))",
+                "references": []
+              }
+            },
+            "substitution": {
+              "str": ""
             }
           }
         },
