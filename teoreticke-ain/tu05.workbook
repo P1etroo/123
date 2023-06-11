@@ -189,11 +189,23 @@
             ]
           },
           "child": {
-            "type": "open",
+            "type": "alpha",
             "node": {
               "id": 8,
               "value": "T A",
-              "references": []
+              "references": [
+                "7"
+              ]
+            },
+            "child": {
+              "type": "openComplete",
+              "node": {
+                "id": 9,
+                "value": "T C",
+                "references": [
+                  "7"
+                ]
+              }
             }
           }
         },
