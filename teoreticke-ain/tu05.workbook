@@ -166,14 +166,18 @@
                   ]
                 },
                 "leftChild": {
-                  "type": "open",
+                  "type": "closed",
                   "node": {
                     "id": 6,
                     "value": "F A",
                     "references": [
                       "3"
                     ]
-                  }
+                  },
+                  "closed": [
+                    "6",
+                    "5"
+                  ]
                 },
                 "rightChild": {
                   "type": "open",
