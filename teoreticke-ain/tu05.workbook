@@ -180,7 +180,7 @@
                   ]
                 },
                 "rightChild": {
-                  "type": "ds",
+                  "type": "beta",
                   "node": {
                     "id": 7,
                     "value": "F C",
@@ -188,15 +188,20 @@
                       "3"
                     ]
                   },
-                  "child": {
-                    "type": "openComplete",
+                  "leftChild": {
+                    "type": "open",
                     "node": {
                       "id": 8,
                       "value": "T B",
-                      "references": [
-                        "4",
-                        "7"
-                      ]
+                      "references": []
+                    }
+                  },
+                  "rightChild": {
+                    "type": "open",
+                    "node": {
+                      "id": 9,
+                      "value": "T ",
+                      "references": []
                     }
                   }
                 }
