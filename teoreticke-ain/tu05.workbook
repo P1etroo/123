@@ -157,13 +157,33 @@
                 ]
               },
               "child": {
-                "type": "open",
+                "type": "beta",
                 "node": {
                   "id": 5,
                   "value": "T A",
                   "references": [
                     "2"
                   ]
+                },
+                "leftChild": {
+                  "type": "open",
+                  "node": {
+                    "id": 6,
+                    "value": "F A",
+                    "references": [
+                      "3"
+                    ]
+                  }
+                },
+                "rightChild": {
+                  "type": "open",
+                  "node": {
+                    "id": 7,
+                    "value": "F C",
+                    "references": [
+                      "3"
+                    ]
+                  }
                 }
               }
             }
