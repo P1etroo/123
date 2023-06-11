@@ -148,13 +148,24 @@
               ]
             },
             "child": {
-              "type": "open",
+              "type": "gamma",
               "node": {
                 "id": 4,
                 "value": "T  (∀y(P(i, y) → Q(f(i) ,y)))",
                 "references": [
                   "2"
                 ]
+              },
+              "child": {
+                "type": "open",
+                "node": {
+                  "id": 5,
+                  "value": "T  (P(i, j) → Q(f(i) ,y))",
+                  "references": []
+                }
+              },
+              "substitution": {
+                "str": ""
               }
             },
             "substitution": {
