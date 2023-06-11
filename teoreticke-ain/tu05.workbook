@@ -192,8 +192,11 @@
                     "type": "open",
                     "node": {
                       "id": 8,
-                      "value": "",
-                      "references": []
+                      "value": "T B",
+                      "references": [
+                        "4",
+                        "7"
+                      ]
                     }
                   }
                 }
