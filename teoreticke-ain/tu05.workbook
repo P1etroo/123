@@ -130,13 +130,31 @@
           "references": []
         },
         "child": {
-          "type": "open",
+          "type": "alpha",
           "node": {
             "id": 2,
             "value": "T ((B ∨ C) ∧ A) ",
             "references": [
-              "2"
+              "1"
             ]
+          },
+          "child": {
+            "type": "alpha",
+            "node": {
+              "id": 3,
+              "value": "F (A ∧ C)",
+              "references": [
+                "1"
+              ]
+            },
+            "child": {
+              "type": "open",
+              "node": {
+                "id": 4,
+                "value": "",
+                "references": []
+              }
+            }
           }
         },
         "config": "Full FOL"
