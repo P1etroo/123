@@ -166,14 +166,18 @@
                   ]
                 },
                 "child": {
-                  "type": "open",
+                  "type": "closed",
                   "node": {
                     "id": 6,
                     "value": "T ( P(a, j) → Q(f(a), j) )",
                     "references": [
                       "4"
                     ]
-                  }
+                  },
+                  "closed": [
+                    "6",
+                    "5"
+                  ]
                 },
                 "substitution": {
                   "str": "y->j"
