@@ -126,7 +126,7 @@
         "type": "open",
         "node": {
           "id": 1,
-          "value": "F ((∀x∀y (P (x, y) → Q (f (x) , y))) → (∀z (P (a, z) → Q (f (a) , z)))",
+          "value": "F ((∀x∀y (P(x, y) → Q(f(x) , y))) → (∀z (P(a, z) → Q (f(a) , z))))",
           "references": []
         },
         "config": "Full FOL"
