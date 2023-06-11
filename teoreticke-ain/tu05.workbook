@@ -126,14 +126,14 @@
         "type": "alpha",
         "node": {
           "id": 1,
-          "value": "F (((B ∨ C) ∧ A) → (A ∧ C))",
+          "value": "F ( ( ( B ∨ C ) ∧ A ) → ( A ∧ C ) )",
           "references": []
         },
         "child": {
           "type": "alpha",
           "node": {
             "id": 2,
-            "value": "T ((B ∨ C) ∧ A) ",
+            "value": "T ( ( B ∨ C ) ∧ A )",
             "references": [
               "1"
             ]
@@ -142,7 +142,7 @@
             "type": "alpha",
             "node": {
               "id": 3,
-              "value": "F (A ∧ C)",
+              "value": "F ( A ∧ C )",
               "references": [
                 "1"
               ]
@@ -151,7 +151,7 @@
               "type": "alpha",
               "node": {
                 "id": 4,
-                "value": "T (B ∨ C)",
+                "value": "T ( B ∨ C )",
                 "references": [
                   "2"
                 ]
