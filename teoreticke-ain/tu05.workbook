@@ -148,7 +148,7 @@
               ]
             },
             "child": {
-              "type": "gamma",
+              "type": "delta",
               "node": {
                 "id": 4,
                 "value": "T ∀y ( P(a, y) → Q(f(a), y) )",
@@ -157,17 +157,28 @@
                 ]
               },
               "child": {
-                "type": "open",
+                "type": "gamma",
                 "node": {
                   "id": 5,
-                  "value": "T ( P(a, j) → Q(f(a), j) )",
-                  "references": [
-                    "4"
-                  ]
+                  "value": "",
+                  "references": []
+                },
+                "child": {
+                  "type": "open",
+                  "node": {
+                    "id": 6,
+                    "value": "T ( P(a, j) → Q(f(a), j) )",
+                    "references": [
+                      "4"
+                    ]
+                  }
+                },
+                "substitution": {
+                  "str": "y->j"
                 }
               },
               "substitution": {
-                "str": "y->j"
+                "str": ""
               }
             },
             "substitution": {
