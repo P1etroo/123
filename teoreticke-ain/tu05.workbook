@@ -130,19 +130,39 @@
           "references": []
         },
         "leftChild": {
-          "type": "open",
+          "type": "beta",
           "node": {
             "id": 2,
             "value": "F ((B ∨ C) ∧ A)",
             "references": [
               "1"
             ]
+          },
+          "leftChild": {
+            "type": "open",
+            "node": {
+              "id": 3,
+              "value": "F (B ∨ C)",
+              "references": [
+                "2"
+              ]
+            }
+          },
+          "rightChild": {
+            "type": "open",
+            "node": {
+              "id": 4,
+              "value": "T A",
+              "references": [
+                "2"
+              ]
+            }
           }
         },
         "rightChild": {
           "type": "open",
           "node": {
-            "id": 3,
+            "id": 5,
             "value": "T  (A ∧ C)",
             "references": [
               "1"
