@@ -151,7 +151,7 @@
               "type": "gamma",
               "node": {
                 "id": 4,
-                "value": "T ∀y ( P(i, y) → Q(f(i), y) )",
+                "value": "T ∀y ( P(a, y) → Q(f(a), y) )",
                 "references": [
                   "2"
                 ]
@@ -160,7 +160,7 @@
                 "type": "open",
                 "node": {
                   "id": 5,
-                  "value": "T ( P(i, j) → Q(f(i), j) )",
+                  "value": "T ( P(a, j) → Q(f(a), j) )",
                   "references": [
                     "4"
                   ]
@@ -171,7 +171,7 @@
               }
             },
             "substitution": {
-              "str": "x->i"
+              "str": "x->a"
             }
           }
         },
