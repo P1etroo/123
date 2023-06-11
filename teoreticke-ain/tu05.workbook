@@ -148,11 +148,23 @@
               ]
             },
             "child": {
-              "type": "open",
+              "type": "alpha",
               "node": {
                 "id": 4,
-                "value": "",
-                "references": []
+                "value": "T (B ∨ C)",
+                "references": [
+                  "2"
+                ]
+              },
+              "child": {
+                "type": "open",
+                "node": {
+                  "id": 5,
+                  "value": "T A",
+                  "references": [
+                    "2"
+                  ]
+                }
               }
             }
           }
