@@ -123,11 +123,31 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "open",
+        "type": "alpha",
         "node": {
           "id": 1,
           "value": "F ((∀x∀y (P(x, y) → Q(f(x) , y))) → (∀z (P(a, z) → Q (f(a) , z))))",
           "references": []
+        },
+        "child": {
+          "type": "alpha",
+          "node": {
+            "id": 2,
+            "value": "T (∀x∀y (P(x, y) → Q(f(x) , y)))",
+            "references": [
+              "1"
+            ]
+          },
+          "child": {
+            "type": "open",
+            "node": {
+              "id": 3,
+              "value": "F (∀z (P(a, z) → Q (f(a) , z)))",
+              "references": [
+                "1"
+              ]
+            }
+          }
         },
         "config": "Full FOL"
       },
