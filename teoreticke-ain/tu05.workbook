@@ -162,7 +162,7 @@
                   "id": 5,
                   "value": "T  (P(i, j) → Q(f(i) ,j))",
                   "references": [
-                    "2"
+                    "3"
                   ]
                 }
               },
