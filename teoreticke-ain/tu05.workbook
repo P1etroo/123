@@ -133,15 +133,17 @@
           "type": "open",
           "node": {
             "id": 2,
-            "value": "F ",
-            "references": []
+            "value": "F ((B ∨ C) ∧ A)",
+            "references": [
+              "1"
+            ]
           }
         },
         "rightChild": {
           "type": "open",
           "node": {
             "id": 3,
-            "value": "",
+            "value": "T ",
             "references": []
           }
         },
