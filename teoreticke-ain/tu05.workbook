@@ -123,90 +123,20 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "beta",
+        "type": "alpha",
         "node": {
           "id": 1,
-          "value": "T (((B ∨ C) ∧ A) → (A ∧ C))",
+          "value": "F (((B ∨ C) ∧ A) → (A ∧ C))",
           "references": []
         },
-        "leftChild": {
-          "type": "beta",
+        "child": {
+          "type": "open",
           "node": {
             "id": 2,
-            "value": "F ((B ∨ C) ∧ A)",
+            "value": "T ((B ∨ C) ∧ A) ",
             "references": [
-              "1"
+              "2"
             ]
-          },
-          "leftChild": {
-            "type": "alpha",
-            "node": {
-              "id": 3,
-              "value": "F (B ∨ C)",
-              "references": [
-                "2"
-              ]
-            },
-            "child": {
-              "type": "alpha",
-              "node": {
-                "id": 4,
-                "value": "F B",
-                "references": [
-                  "3"
-                ]
-              },
-              "child": {
-                "type": "openComplete",
-                "node": {
-                  "id": 5,
-                  "value": "F C",
-                  "references": [
-                    "3"
-                  ]
-                }
-              }
-            }
-          },
-          "rightChild": {
-            "type": "openComplete",
-            "node": {
-              "id": 6,
-              "value": "F A",
-              "references": [
-                "2"
-              ]
-            }
-          }
-        },
-        "rightChild": {
-          "type": "alpha",
-          "node": {
-            "id": 7,
-            "value": "T  (A ∧ C)",
-            "references": [
-              "1"
-            ]
-          },
-          "child": {
-            "type": "alpha",
-            "node": {
-              "id": 8,
-              "value": "T A",
-              "references": [
-                "7"
-              ]
-            },
-            "child": {
-              "type": "openComplete",
-              "node": {
-                "id": 9,
-                "value": "T C",
-                "references": [
-                  "7"
-                ]
-              }
-            }
           }
         },
         "config": "Full FOL"
