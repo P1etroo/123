@@ -143,8 +143,10 @@
           "type": "open",
           "node": {
             "id": 3,
-            "value": "T ",
-            "references": []
+            "value": "T  (A ∧ C)",
+            "references": [
+              "1"
+            ]
           }
         },
         "config": "Full FOL"
