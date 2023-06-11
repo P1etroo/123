@@ -134,15 +134,19 @@
           "node": {
             "id": 2,
             "value": "F ((B ∨ C) ∧ A) ",
-            "references": []
+            "references": [
+              "1"
+            ]
           }
         },
         "rightChild": {
           "type": "open",
           "node": {
             "id": 3,
-            "value": "",
-            "references": []
+            "value": "T (A ∧ C)",
+            "references": [
+              "1"
+            ]
           }
         },
         "config": "Full FOL"
