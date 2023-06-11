@@ -123,11 +123,27 @@
       "id": 16,
       "type": "tableauEditor",
       "data": {
-        "type": "open",
+        "type": "beta",
         "node": {
           "id": 1,
           "value": "T (((B ∨ C) ∧ A) → (A ∧ C))",
           "references": []
+        },
+        "leftChild": {
+          "type": "open",
+          "node": {
+            "id": 2,
+            "value": "F ((B ∨ C) ∧ A) ",
+            "references": []
+          }
+        },
+        "rightChild": {
+          "type": "open",
+          "node": {
+            "id": 3,
+            "value": "",
+            "references": []
+          }
         },
         "config": "Full FOL"
       },
