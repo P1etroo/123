@@ -126,14 +126,14 @@
         "type": "alpha",
         "node": {
           "id": 1,
-          "value": "F ((∀x∀y (P(x, y) → Q(f(x) , y))) → (∀z (P(a, z) → Q (f(a) , z))))",
+          "value": "F ( ∀x ∀y ( P(x, y) → Q(f(x), y) ) → ∀z ( P(a, z) → Q(f(a), z) ) )",
           "references": []
         },
         "child": {
           "type": "alpha",
           "node": {
             "id": 2,
-            "value": "T (∀x∀y (P(x, y) → Q(f(x) , y)))",
+            "value": "T ∀x ∀y ( P(x, y) → Q(f(x), y) )",
             "references": [
               "1"
             ]
@@ -142,7 +142,7 @@
             "type": "gamma",
             "node": {
               "id": 3,
-              "value": "F (∀z (P(a, z) → Q (f(a) , z)))",
+              "value": "F ∀z ( P(a, z) → Q(f(a), z) )",
               "references": [
                 "1"
               ]
@@ -151,7 +151,7 @@
               "type": "gamma",
               "node": {
                 "id": 4,
-                "value": "T  (∀y(P(i, y) → Q(f(i) ,y)))",
+                "value": "T ∀y ( P(i, y) → Q(f(i), y) )",
                 "references": [
                   "2"
                 ]
@@ -160,7 +160,7 @@
                 "type": "open",
                 "node": {
                   "id": 5,
-                  "value": "T  (P(i, j) → Q(f(i) ,j))",
+                  "value": "T ( P(i, j) → Q(f(i), j) )",
                   "references": [
                     "4"
                   ]
